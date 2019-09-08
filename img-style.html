@@ -1,0 +1,1506 @@
+﻿
+<!--------------------------------------------------------->
+<style>
+.tbox-container {
+    position: relative;
+    font-family: Arial;
+}
+
+.tbox-text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+</style>
+
+<h2>Image Text Blocks</h2>
+<p>How to place text blocks over an image:</p>
+
+<div class="tbox-container">
+  <img src="images/dad.jpg" alt="Nature" style="width:100%;">
+  <div class="tbox-text-block">
+    <h4>Hero</h4>
+    <p>There is a hero in every Theroff</p>
+  </div>
+</div>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+<style>
+#myImgM {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImgM:hover {opacity: 0.7;}
+
+/* The modalM (background) */
+.modalM {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* modalM Content (image) */
+.modalM-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* captionM of modalM Image */
+#captionM {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modalM-content, #captionM {    
+    -webkit-animation-name: zoomM;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoomM;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoomM {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoomM {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The closeM Button */
+.closeM {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.closeM:hover,
+.closeM:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modalM-content {
+        width: 100%;
+    }
+}
+</style>
+
+<h2>Image modalM</h2>
+<p>In this example, we use CSS to create a modalM (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modalM and to display the current image inside the modalM when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image captionM text inside the modalM.</p>
+
+<img id="myImgM" src="images/dad.jpg" alt="Ivan Theroff" style="width:100%;max-width:300px">
+
+<!-- The modalM -->
+<div id="mymodalM" class="modalM">
+  <span class="closeM">&times;</span>
+  <img class="modalM-content" id="img01">
+  <div id="captionM"></div>
+</div>
+
+<script>
+// Get the modalM
+var modalM = document.getElementById('mymodalM');
+
+// Get the image and insert it inside the modalM - use its "alt" text as a captionM
+var img = document.getElementById('myImgM');
+var modalMImg = document.getElementById("img01");
+var captionMText = document.getElementById("captionM");
+img.onclick = function(){
+    modalM.style.display = "block";
+    modalMImg.src = this.src;
+    captionMText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closeMs the modalM
+var span = document.getElementsByClassName("closeM")[0];
+
+// When the user clicks on <span> (x), closeM the modalM
+span.onclick = function() { 
+    modalM.style.display = "none";
+}
+</script>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+.mySlidesa {display: none;}
+a-img {vertical-align: middle;}
+
+/* Slideshow container */
+.a-slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption a-text */
+.a-text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  a-text-align: center;
+}
+
+/* Number a-text (1/3 etc) */
+.a-number-text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The a-dots/bullets/indicators */
+.a-dot {
+   height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.a-active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.a-fade {
+  -webkit-animation-name: a-fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: a-fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes a-fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes a-fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease a-text size */
+@media only screen and (max-width: 300px) {
+  .a-text {font-size: 11px}
+}
+</style>
+
+<h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
+
+<div class="a-slideshow-container">
+
+<div class="mySlidesa a-fade">
+  <div class="a-number-text">1 / 3</div>
+  <img class="a-img" src="images/8th-day.jpg" style="width:100%">
+  <div class="a-text">Caption a-text</div>
+</div>
+
+<div class="mySlidesa a-fade">
+  <div class="a-number-text">2 / 3</div>
+  <img class="a-img" src="images/9th-day.jpg" style="width:100%">
+  <div class="a-text">Caption Two</div>
+</div>
+
+<div class="mySlidesa a-fade">
+  <div class="a-number-text">3 / 3</div>
+  <img class="a-img" src="images/farm-buildings.jpg" style="width:100%">
+  <div class="a-text">Caption Three</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="a-dot"></span> 
+  <span class="a-dot"></span> 
+  <span class="a-dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlidesa");
+    var dots = document.getElementsByClassName("a-dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" a-active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " a-active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+.clbox-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.clbox-container .clbox-img {vertical-align: middle;}
+
+.clbox-container .clbox-content {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+</style>
+<div class="clbox-container">
+  <img class="clbox-img" src="images/barn.jpg" alt="Notebook" style="width:100%;">
+  <div class="clbox-content">
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  </div>
+</div>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+.fp-bg {
+    /* The image used */
+    background-image: url("images/Farm-Scene.jpg");
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*---------NotFullPage ------------------*/
+/*bg {
+ /* Full height */
+    height: 50%; 
+}*/
+</style>
+
+<div class="fp-bg">
+<h1>Full Page Background Image</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div><!- fp-bg ->
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+ 
+div.polaroid2 {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.containers {
+  padding: 10px;
+}
+
+div.polaroid1 {
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 1px solid #BFBFBF;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+div.rotate_right {
+    float: left;
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Safari */
+    transform: rotate(7deg);
+}
+
+div.rotate_left {
+    float: left;
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Safari */
+    transform: rotate(-8deg);
+}
+</style>
+
+<h2>Polaroid Images / Cards</h2>
+
+<p>The box-shadow property can be used to create paper-like cards:</p>
+
+<div class="polaroid1">
+  <img src="images/farmer.jpg" alt="Norway" style="width:100%">
+  <div class="pol-containers">
+    <p>Hardanger, Norway</p>
+  </div>
+</div>
+<div class="polaroid1 rotate_right">
+  <img src="images/childhood.jpg" alt="Pulpit rock" width="284" height="213">
+  <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+</div>
+
+<div class="polaroid1 rotate_left">
+  <img src="images/wife.jpg" alt="Monterosso al Mare" width="284" height="213">
+  <p class="caption">Monterosso al Mare. One of the five villages in Cinque Terre, Italy.</p>
+</div>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+#example1 {
+    background: url(images/farmer.jpg) left top no-repeat, url(images/childhood.jpg) right bottom no-repeat, url(images/iris-mouse2.jpg) left top repeat;
+    padding: 15px;
+    background-size: 50px, 130px, auto;
+}
+</style>
+<div id="example1">
+<h1>Lorem Ipsum Dolor</h1>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+</div>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+/*PIC*/
+.pic {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  margin: 20px;
+  border: 10px solid white;
+
+  -webkit-box-shadow: 5px 5px 5px #111;
+  box-shadow: 5px 5px 5px #111;
+  float: left;
+}
+
+.pic:hover {
+  cursor: pointer;
+}
+
+/*SHRINK*/
+.shrink img {
+  height: 400px;
+  width: 400px;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.shrink img:hover {
+  width: 300px;
+  height: 300px;
+}
+
+/*BLUR*/
+.blur img {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.blur img:hover {
+  -webkit-filter: blur(5px);
+}
+
+/*TILT*/
+.tilt {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+/*MORPH*/
+.morph {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*SIDEPAN*/
+.sidepan img {
+  margin-left: 0px;
+  -webkit-transition: margin 1s ease;
+     -moz-transition: margin 1s ease;
+       -o-transition: margin 1s ease;
+      -ms-transition: margin 1s ease;
+          transition: margin 1s ease;
+}
+
+.sidepan img:hover {
+  margin-left: -200px;
+}
+
+/*VERTPAN*/
+.vertpan img {
+  margin-top: 0px;
+  -webkit-transition: margin 1s ease;
+     -moz-transition: margin 1s ease;
+       -o-transition: margin 1s ease;
+      -ms-transition: margin 1s ease;
+          transition: margin 1s ease;
+}
+
+.vertpan img:hover {
+  margin-top: -200px;
+}
+
+/*FOCUS*/
+.focus {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.focus:hover {
+  border: 7px solid #027d4b;
+  border-radius: 50%;
+}
+
+/*B&W*/
+.bw {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.bw:hover {
+  -webkit-filter: grayscale(100%);
+}
+
+/*DARKEN*/
+.brighten img {
+  -webkit-filter: brightness(-65%);
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.brighten img:hover {
+  -webkit-filter: brightness(0%);
+}
+/*lighten*/
+.brighten2 img {
+  -webkit-filter: brightness(1.65%);
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.brighten2 img:hover {
+  -webkit-filter: brightness(1.75);
+}
+</style>
+<div class="header">Image Hover Effects - <a href="https://css-tricks.com/almanac/properties/f/filter/">https://css-tricks.com/almanac/properties/f/filter/</a></div>
+
+<div class="shrink pic"><img src="images/coca-cola.jpg" alt="city"></div>
+<div class="sidepan pic"><img src="images/coca-cola.jpg" alt="kick"></div>
+<div class="vertpan pic"><img src="images/coca-cola.jpg" alt="climb"></div>
+<div class="tilt pic"><img src="images/coca-cola.jpg" alt=""></div>
+<div class="morph pic"><img src="images/coca-cola.jpg" alt=""></div>
+<div class="focus pic"><img src="images/coca-cola.jpg" alt=""></div>
+<div class="blur pic"><img src="images/coca-cola.jpg" alt="plane"></div>
+<div class="bw pic"><img src="images/coca-cola.jpg" alt="sea"></div>
+<div class="brighten pic"><img src="images/coca-cola.jpg" alt="sea"></div>
+<div class="brighten2 pic"><img src="images/coca-cola.jpg" alt="sea"></div>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+.img-header {
+    text-align: center;
+    padding: 32px;
+}
+
+.img-row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.img-column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.img-img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .img-column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .img-column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+</style>
+<!-- Header -->
+<div class="img-header">
+  <h1>Responsive Image Grid</h1>
+  <p>Resize the browser window to see the responsive effect.</p>
+</div>
+
+<!-- Photo Grid -->
+<div class="img-row"> 
+  <div class="img-column">
+    <img class="img-img" src="images/barn.jpg" style="width:100%">
+    <img class="img-img" src="images/barn-1.jpg" style="width:100%">
+    <img class="img-img" src="images/barn-3.jpg" style="width:100%">
+    <img class="img-img" src="images/barn-inside.jpg" style="width:100%">
+  </div>  
+  <div class="img-column">
+    <img class="img-img" src="images/barn-inside.jpg" style="width:100%">
+    <img class="img-img" src="images/8th-day.jpg" style="width:100%">    
+    <img class="img-img" src="images/bountiful-harvest.jpg" style="width:100%">
+    <img class="img-img" src="images/Farm-Scene.jpg" style="width:100%">
+    <img class="img-img" src="images/rooster.jpg" style="width:100%">
+    <img class="img-img" src="images/bountiful-harvest.jpg" style="width:100%">
+  </div>  
+  <div class="img-column">  
+    <img class="img-img" src="images/chicken-2.jpg" style="width:100%">
+    <img class="img-img" src="images/horse3.jpg" style="width:100%">
+    <img class="img-img" src="images/coca-cola.jpg" style="width:100%">
+    <img class="img-img" src="images/next-day.jpg" style="width:100%">
+  </div>  
+  <div class="img-column">
+    <img class="img-img" src="images/Farm-Scene.jpg" style="width:100%">
+    <img class="img-img" src="images/Country-Fried-Chicken.jpg" style="width:100%">
+    <img class="img-img" src="images/country-life.jpg" style="width:100%">
+    <img class="img-img" src="images/horses.jpg" style="width:100%">
+  </div>  
+ 
+</div><!-img-row->
+
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+.imgFilters {
+    width: 33%;
+    height: auto;
+    float: left; 
+    max-width: 235px;
+}
+.blur {-webkit-filter: blur(4px);filter: blur(4px);}
+.brightness {-webkit-filter: brightness(250%);filter: brightness(250%);}
+.contrast {-webkit-filter: contrast(180%);filter: contrast(180%);}
+.grayscale {-webkit-filter: grayscale(100%);filter: grayscale(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);}
+.invert {-webkit-filter: invert(100%);filter: invert(100%);}
+.opacity {-webkit-filter: opacity(50%);filter: opacity(50%);}
+.saturate {-webkit-filter: saturate(7); filter: saturate(7);}
+.sepia {-webkit-filter: sepia(100%);filter: sepia(100%);}
+.shadow {-webkit-filter: drop-shadow(8px 8px 10px green);filter: drop-shadow(8px 8px 10px green);}
+</style>
+<img class="imgFilters" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters blur" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters brightness" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters contrast" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters grayscale" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters huerotate" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters invert" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters opacity" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters saturate" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters sepia" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<img class="imgFilters shadow" src="images/next-day.jpg" alt="Pineapple" width="300" height="300">
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+    .swap-img2 {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: inline-block;
+    }
+    .swap-img2 .swap-img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+    }
+    .swap-img2:hover .swap-img-top {
+        display: inline;
+    }
+
+</style>
+<h2>Image Swap on Hover with CSS</h2>
+
+    <div class="swap-img2">
+        <img src="images/farm-buildings.jpg" alt="Card Back">
+        <img src="images/9th-day.jpg" class="swap-img-top" alt="Card Front">
+    </div>
+
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+<style>
+#boxshadow {
+    position: relative;
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    padding: 10px;
+    background: white;
+}
+
+/* Make the image fit the box */
+#boxshadow img {
+    width: 100%;
+    border: 1px solid #8a4419;
+    border-style: inset;
+}
+
+#boxshadow::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* hide shadow behind image */
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);                
+    width: 70%; 
+    left: 15%; /* one half of the remaining 30% */
+    height: 100px;
+    bottom: 0;
+}
+</style>
+<div id="boxshadow">
+  <img src="images/farmer.jpg" alt="Norway" width="600" height="400">
+</div>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<style>
+/*-----------------  Top Nav  ----------------------------------*/
+.full {
+  background: url(images/farmer.jpg) 0 0 no-repeat;
+  min-height: 634px;
+}
+.half {
+  background: url(images/farmer.jpg) 0 0 no-repeat;
+  min-height: 301px;
+  margin-bottom: 30px;
+}
+.half2 {
+  background: url(images/farmer.jpg) 0 0 no-repeat;
+  min-height: 301px;
+}
+.full, .half, .half2 {
+  background-size: cover;
+  position: relative;
+}   
+
+.full:hover .overlay-effect, .half:hover .overlay-effect, .half2:hover .overlay-effect {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay-effect {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(259, 67, 95, 0.7);
+  overflow:hidden;
+}
+
+.full a,
+.half a,
+.half2 a {
+  color: #fff;
+}
+
+.full h3,
+.half h3,
+.half2 h3 {
+  padding: 15px 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .full, .half, .half2 {margin-bottom: 10px;}
+}
+
+</style>
+ <div class="row">
+     <div class="bx12">
+ <div class="full">
+<div class="overlay-effect"></div>
+ <div>
+	 <h3><a href="#">Launch Websites <br>into Orbit</a></h3>
+		</div><!-- bx -->
+	  </div><!-- row -->
+ <div class="row">
+     <div class="bx12">	
+	<div class="half">
+		 <div class="overlay-effect"></div>
+		<div>
+		  <h3><a href="#">Launch Websites <br>into Orbit</a></h3>
+
+		</div><!-- bx -->
+	  </div><!-- row -->
+ <div class="row">
+     <div class="bx12">
+	<div class="half2">
+		 <div class="overlay-effect"><h3><a href="#">Launch Websites <br>into Orbit</a></h3></div>
+		<div>
+		</div><!-- bx -->
+	  </div><!-- row -->
+
+
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<h1>Image samples</h1>
+<!--------------------------------------------------------->
+
+<div class="bx3">
+<style>
+.sample1 {
+  height: 150px;
+  width: 150px;
+}
+.container1 {
+  height: 150px;
+  width: 150px;
+perspective: 500px;
+  border: 1px solid black;
+    background-color:inherit;
+}
+.transformed-1 {
+  transform: rotateY(50deg);
+    background-color:lightblue;
+}
+
+</style>
+<div class="container1">
+  <div class="sample1 transformed-1"><img src='images/bountiful-harvest.jpg' width="150" height="100"  />transformed-1</div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.sample2 {
+  height: 150px;
+  width: 150px;
+}
+
+.transformed-2 {
+height: 150px;
+  width: 150px;
+  background: lime;
+  border: 1px solid blue;
+ transform: skew(10deg, 20deg) translateX(20px);
+
+}
+
+</style>
+  <div class="sample2 transformed-2"><img src='images/bountiful-harvest.jpg' width="150" height="100"  />transformed-2</div>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.sample3 {
+  height: 150px;
+  width: 150px;
+}
+
+.transformed-3 {
+  background: lime;
+transform: rotate(45deg);
+  transform: rotate3d(1, 2, 3, -45deg);
+}
+</style>
+  <div class="sample3 transformed-3">
+<img src='images/bountiful-harvest.jpg' width="150" height="100"  />transformed-3</div>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+img.skewed {
+  width: 300px;
+  height: 200px;
+ /*General*/
+ transform: skewX(30deg); /*Firefox*/
+ -moz-transform: skewX(30deg); /*Microsoft Internet Explorer*/
+ -ms-transform: skewX(30deg); /*Chrome, Safari*/
+ -webkit-transform: skewX(30deg); /*Opera*/
+ -o-transform: skewX(30deg); }
+</style>
+skewed
+ <img src="images/horses.jpg" alt="picture" class="skewed" width="300" height="200"  />
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx6">
+<!--------------------------------------------------------->
+<style>
+/* ----------------- pageOption  ------------------ */
+.pageOption {
+  overflow: hidden;
+  position: relative;
+  width: 30em;
+ height: 20em;
+}
+.option, .option img { width: 100%; height: 100%; }
+.option {
+  overflow: hidden;
+  position: absolute;  
+  /* arctan(27 / 40) = 34.01935deg 
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg);
+}
+.option:first-child {
+  left: -.25em;
+  transform-origin: 100% 0;
+}
+.option:last-child {
+  right: -.25em;
+  transform-origin: 0 100%;
+}
+.option img {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+/* ----------------- /pageOption  ------------------ */
+</style>
+pageOption
+ <div class='pageOption'>
+  <a href='#' class='option' data-inf='photo'>
+    <img src="images/bountiful-harvest.jpg" width="300" height="200" />
+  </a>
+  <a href='#' class='option' data-inf='cinema'>
+    <img src="images/two.jpg" width="300" height="200" />
+  </a>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<p>inline style</p>
+<img src="images/two.jpg"style="height:200px; width:400px; border-radius:50%;"alt="Horses">
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.oval-image img {
+width: 300px;
+height: 200px;
+-webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+ border-radius: 50%;
+ }
+</style>
+oval
+<div class="oval-image"><img src="images/bountiful-harvest.jpg"></div>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.circular-image img {
+width: 300px;
+height: 300px;
+-webkit-border-radius: 150px;
+-moz-border-radius: 150px;
+-ms-border-radius: 150px;
+-o-border-radius: 150px;
+ border-radius: 150px;
+}
+</style>
+circle
+<div class="circular-image"><img src="images/bountiful-harvest.jpg"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+/* -----------------diamonds  ------------------ */
+.diamond-big
+{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+
+    /* rotate diamond */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.label {
+    /* counter rotate label */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    /* position label */
+    margin-top:80px;
+    margin-left:-20px;
+}
+.diamond-big:before
+{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+
+    /* counter rotate bg */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* set bg for different DJs */
+.diamond-tiesto:before {
+        background: url(images/barn.jpg) 0 0 repeat;
+}
+/* -----------------/diamonds  ------------------ */
+</style>
+diamonds
+<div id="diamonds">
+<div class="diamond-big diamond-tiesto">Sample diamonds</div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+/* -----------------  hexagon  ------------------ */
+.hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  margin: 86.60px 0;
+  background-image: url(images/barn.jpg);
+  background-size: auto 346.4102px;
+  background-position: center;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 212.13px;
+  height: 212.13px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 43.93px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 300.0000px;
+  height: 173.20508075688775px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -106.0660px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -106.0660px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 300.0000px;
+  height: 173.2051px;
+  z-index: 2;
+  background: inherit;
+}
+
+/* -----------------/ hexagon  ------------------ */
+</style>
+hexagon
+
+<div class="hexagon">
+  <div class="hexTop"></div>
+  <div class="hexBottom"></div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+/* ----------------- triangle  ------------------ */
+.triangle img { display: block; }
+
+.triangle { 
+   position   : relative; 
+   overflow   : hidden; 
+   padding    : 0; margin: 0; 
+   display    : inline-block; 
+}
+
+.triangle:after,
+.triangle:before {
+   content    : "";
+   position   : absolute;
+   z-index    : 2;
+   left       : -50%;
+   width      : 200%;
+   height     : 40%;
+   display    : block;
+   background : #fff;   
+}
+
+.triangle:before {
+    top: -24%;  
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.triangle:after {
+    bottom: -24%;  
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+/* ----------------- /triangle  ------------------ */
+</style>
+triangle
+<figure class="triangle">
+<img src="images/two.jpg" alt="Horses" width="400" height="200" />
+</figure>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.test1 {
+    width: 90%;
+    height: auto;
+    background-color: yellow;
+    /* Rotate div */
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+</style>
+test1
+<div class="test1">
+<img src="images/two.jpg" alt="Horses" width="200" height="100" />
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.test2 {
+    width: 90%;
+    height: auto;
+background-color:lightblue;
+    transform:skew(170deg,170deg);
+}
+</style>
+test2
+<div class="test2">
+<img src="images/two.jpg" alt="Horses" width="400" height="200" />
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.test3 {
+    width: 90%;
+    height: auto;
+    background-color:lightblue;
+    transform:rotateZ(25deg);
+}
+</style>
+test3
+<div class="test3">
+<img src="images/horses.jpg" alt="Horses" width="400" height="200" />
+</div>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.hexagon2 {
+  position: relative;
+  margin: 100px auto;
+  width: 190px;
+  height: 110px;
+  background-image: url('images/horse3.jpg');
+  background-position: center center;
+  z-index: 1;
+  
+/* Text styling */
+
+  line-height: 110px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  cursor: pointer;
+  transition: color 500ms ease, text-shadow 500ms ease;
+}
+.hexagon2:hover {
+  color: #fff;
+  text-shadow: 0 0 10px white;
+}
+
+.hexagon2 .face1,
+.hexagon2 .face2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: inherit;
+  z-index: -1;
+  
+/* Keeps borders smooth in webkit */
+
+  backface-visibility: hidden;
+}
+.hexagon2 .face1:before,
+.hexagon2 .face2:before {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: inherit;
+}
+
+.hexagon2 .face1 { transform: rotate(60deg); }
+.hexagon2 .face1:before {
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(-60deg) translate(-110px, 0);
+}
+
+.hexagon2 .face2 { transform: rotate(-60deg); }
+.hexagon2 .face2:before {
+  right: 0;
+  transform-origin: right top;
+  transform: rotate(60deg) translate(110px, 0);
+}
+
+</style>
+hexagon2
+<div class="hexagon2">
+  HEXAGON
+  <div class="face1"></div>
+  <div class="face2"></div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+/*------------------cuadro -------------------------*/	
+.cuadro_intro_hover{
+ background-color:#935347;
+        padding: 0px;
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+	}
+	.cuadro_intro_hover:hover .caption{
+		opacity: 1;
+		transform: translateY(-150px);
+		-webkit-transform:translateY(-150px);
+		-moz-transform:translateY(-150px);
+		-ms-transform:translateY(-150px);
+		-o-transform:translateY(-150px);
+	}
+	.cuadro_intro_hover img{
+		z-index: 4;
+	}
+	.cuadro_intro_hover .caption{
+		position: absolute;
+		top:150px;
+		-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+		-o-transition:all 0.3s ease-in-out;
+		-ms-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+		width: 100%;
+	}
+	.cuadro_intro_hover .blur{
+		background-color: rgba(0,0,0,0.7);
+		height: 300px;
+		z-index: 5;
+		position: absolute;
+		width: 100%;
+	}
+	.cuadro_intro_hover .caption-text{
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		height: 300px;
+		text-align: center;
+		top:-20px;
+		width: 100%;
+	}
+
+/*------------------/cuadro -------------------------*/
+</style>
+<div class="cuadro_intro_hover " style="background-color:#8aaa7f;">
+<p style="text-align:center; margin-top:20px;">
+<img src="images/700x400-1.jpg" class="img-responsive" alt="500x300">
+</p>
+<div class="caption">
+<div class="blur" style="background-color: rgba(138,170,127,0.7);"></div>
+<div class="caption-text" style="color:#64706c">
+<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">
+Pretty Pair</h3>
+<p>Change color on page...</p>
+<a class=" btn btn-default" href="images/700x400-1.jpg">
+<span class="glyphicon glyphicon-plus"> INFO</span></a>
+</div>
+</div>
+</div>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<div class="cuadro_intro_hover ">
+<p style="text-align:center; margin-top:20px;">
+<img src="images/Chihuahua-Puppy-4.jpg" class="img-responsive" alt="Chihuahua-Puppy">
+</p>
+<div class="caption">
+<div class="blur"></div>
+<div class="caption-text">
+<h3 style="border-top:2px solid white; border-bottom:2px solid white; padding:10px;">
+Chihuahua-Puppy</h3>
+<p>Loren ipsum dolor si amet ipsum dolor si amet ipsum dolor...</p>
+<a class=" btn btn-default" href="images/Chihuahua-Puppy-4.jpg"><span class="glyphicon glyphicon-plus"> INFO</span></a>
+</div>
+</div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.circle{border-radius:50% !important}
+</style>
+<h4>Round Shapes</h4><br>
+<p><img src="images/iris-mouse2.jpg" class="circle" alt="Car">circle</p>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.round-small{border-radius:2px !important}
+</style>
+<h4>Round Shapes</h4><br>
+<p><img src="images/iris-mouse2.jpg" class="round-small" alt="Car">round-small</p>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.round-medium{border-radius:2px !important}
+</style>
+<h4>Round Shapes</h4><br>
+<p><img src="images/iris-mouse2.jpg" class="round-medium" alt="Car">round-small</p>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.round-large{border-radius:4px !important}
+</style>
+<h4>Round Shapes</h4><br>
+<p><img src="images/iris-mouse2.jpg" class="round-large" alt="Car">round-medium</p>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.round-xlarge{border-radius:8px !important}
+</style>
+<h4>Round Shapes</h4><br>
+<p><img src="images/iris-mouse2.jpg" class="round-xlarge" alt="Car">round-large</p>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx3">
+<!--------------------------------------------------------->
+<style>
+.round-xxlarge{border-radius:16px !important}
+</style>
+<h4>Round Shapes</h4><br>
+<p><img src="images/iris-mouse2.jpg" class="round-xxlarge" alt="Car">round-xlarge</p>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<style>
+.round-jumbo{border-radius:64px !important}
+</style>
+<h4>Round Shapes</h4><br> 
+<p><img src="images/iris-mouse2.jpg" class="round-jumbo" alt="Car">round-jumbo</p> 
+
+

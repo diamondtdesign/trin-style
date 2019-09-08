@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+<!-- palete generator -- https://mycolor.space/-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Images Effects</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!========================================>
+<!-- CSS -->
+<link href="css/trin/grid.css" rel="stylesheet" type="text/css" />
+<link href="css/trin/trin-style.css" rel="stylesheet" type="text/css" />
+
+<!--------------------------------------------------------->
+<!-- JS -->
+<script> src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="js/color-grab.js"></script>
+
+<!--------------------------------------------------------->
+<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+<!=============================================>
+</head>
+<body>
+<!=============================================>
+<div class="page">
+<!------------------Place your code here -------------------------->
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->1
+Creating transparent/Opacity images - mouseover effect
+<style type="text/css">
+.pic{
+	width:190px;
+	height:190px;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	background: url(images/country-life.jpg) no-repeat;
+}
+.pic:hover
+{
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+}
+</style>
+	<div class="pic"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->2
+Text Overlay on Image Hover
+<style type="text/css">
+.pic2{
+	width:400px;
+	height:217px;
+	background: url(images/country-life.jpg) no-repeat;
+}
+.text2{
+	width:340px;
+	height:217px;
+	background:#FFF;
+	opacity:0;
+}
+.pic2:hover .text2
+{
+	opacity:0.6;
+	text-align:justify;
+	color:#000000;
+	font-size:20px;
+	font-weight:700;
+	font-family:"Times New Roman", Times, serif;
+	padding:30px;
+}
+</style>
+
+<div class="pic2">
+  <div class="text2">
+	The tiger is the largest cat species, reaching a
+	total body length of up to 3.3 m and weighing up
+	to 306 kg. Its most recognizable feature is a pattern
+	of dark vertical stripes on reddish-orange fur
+	with a lighter underside.
+  </div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->3
+<style>
+.duck2
+{
+	width:190px;
+	height:190px;
+	background: url(images/country-life.jpg) no-repeat;
+	border:5px solid #000000;
+	font-size: 30px;
+	font-weight: 900;
+	color:blue;
+}
+.trBorder {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    background: rgba(255,255,255,.5);
+}
+</style>
+<div class="duck2">
+	<div class="trBorder" align=center>
+	Write your text here
+	</div>
+	</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->4
+CSS hover image swap - onmouseover Event
+
+<style type="text/css">
+.imgBox
+{
+	width: 191px;
+	height: 191px;
+	background: url(images/country-life.jpg) no-repeat;
+}
+.imgBox:hover {
+	width: 191px;
+	height: 191px;
+	background: url(images/childhood.jpg) no-repeat;
+	}
+</style>
+
+<div class="imgBox"><div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->5
+<style type="text/css">
+	.pics{
+		width:320px;
+		height:240px;
+		background: url(images/country-life.jpg) no-repeat;
+		border:5px solid #000000;
+	}
+	.pics .red{
+		position:relative;
+		top:0px;
+		width:320px;
+		height:75px;
+		background:#FF2400;
+		opacity:0;
+	}
+	.pics .yellow{
+		width:320px;
+		height:75px;
+		top:75px;
+		background:#FFA500;
+		opacity:0;
+	}
+	.pics .green
+	{
+		width:320px;
+		height:90px;
+		top:75px;
+		background:#008000;
+		opacity:0;
+	}
+	.pics:hover .red,.pics:hover .yellow,.pics:hover .green
+	{
+		opacity:0.9;
+	}
+</style>
+<div class="pics">
+	<div class="red"></div>
+	<div class="yellow"></div>
+	<div class="green"></div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->6
+<style type="text/css">
+	.trPic{
+		width:320px;
+		height:240px;
+		background: url(images/country-life.jpg) no-repeat;
+		border:5px solid #000000;
+	}
+	.trPic .redO{
+		position:relative;
+		top:0px;
+		width:320px;
+		height:240px;
+		background:#FF2400;
+		opacity:0;
+	}
+	.trPic:hover .redO
+	{
+		opacity:0.7;
+	}
+</style>
+<div class="trPic">
+	<div class="redO"></div>
+	</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->7
+
+<style type="text/css">
+.imageHolder1 {
+    position: relative;
+    width: 285px;
+    height: 175px;
+}
+.imageHolder1 .bottom-caption {
+    position: absolute;
+    width: 283px;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    color: #ffffff;
+    background: green;
+	text-align:center;
+	font-weight:bold;
+	opacity:0.7;
+}
+</style>
+
+<div class="imageHolder1">
+    <img src="images/country-life.jpg" alt="" />
+    <div class="bottom-caption"><br>Caption goes here</div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->8
+<style type="text/css">
+.top-imageHolder {
+    position: relative;
+    width: 285px;
+    height: 175px;
+}
+.top-imageHolder .top-caption {
+    position: absolute;
+    width: 283px;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    color: black;
+    background: lime;
+	text-align:center;
+	font-weight:bold;
+	opacity:0.7;
+}
+</style>
+
+
+<div class="top-imageHolder">
+    <img src="images/country-life.jpg" alt="" />
+    <div class="top-caption"><br>Caption goes here</div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->9
+
+<style type="text/css">
+.right-imageHolder {
+    position: relative;
+    width: 285px;
+    height: 175px;
+}
+.right-imageHolder .right-caption {
+    position: absolute;
+    width: 70px;
+    height: 175px;
+    top: 0px;
+    right: 0px;
+    color: #ffffff;
+    background: green;
+	text-align:center;
+	font-weight:bold;
+	opacity:0.7;
+}
+
+</style>
+<div class="right-imageHolder">
+    <img src="images/country-life.jpg" alt="" />
+    <div class="right-caption"><br>Caption goes here</div>
+</div>
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->10
+<style type="text/css">
+.left-imageHolder {
+    position: relative;
+    width: 285px;
+    height: 175px;
+}
+.left-imageHolder .left-caption {
+    position: absolute;
+    width: 70px;
+    height: 177px;
+    top: 0px;
+    left: 0px;
+    color: black;
+    background: lime;
+	text-align:center;
+	font-weight:bold;
+	opacity:0.7;
+}
+</style>
+<div class="imageHolder">
+    <img src="images/country-life.jpg" alt="" />
+    <div class="left-caption"><br>Caption goes here</div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->11
+<style>
+.vin {
+		width: 400px;
+		height: 200px;
+		border:2px solid #fff;
+		background: url(images/country-life.jpg) no-repeat;
+		-moz-box-shadow: inset 10px 10px 50px #fff;
+		-webkit-box-shadow: inset 10px 10px 50px #fff;
+		box-shadow: inset 10px 10px 50px #fff;
+	}
+</style>
+<div class="vin"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx12">
+<!--------------------------------------------------------->
+12 of 12
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx12">
+<!--------------------------------------------------------->
+<style>
+/*PIC*/
+.pic {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  margin: 20px;
+  border: 10px solid white;
+
+  -webkit-box-shadow: 5px 5px 5px #111;
+  box-shadow: 5px 5px 5px #111;
+  float: left;
+}
+
+.pic:hover {
+  cursor: pointer;
+}
+
+/*GROW*/
+.grow img {
+  height: 300px;
+  width: 300px;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.grow img:hover {
+  width: 400px;
+  height: 400px;
+}
+
+/*SHRINK*/
+.shrink img {
+  height: 400px;
+  width: 400px;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.shrink img:hover {
+  width: 300px;
+  height: 300px;
+}
+
+/*BLUR*/
+.blur img {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.blur img:hover {
+  -webkit-filter: blur(5px);
+}
+
+/*TILT*/
+.tilt {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.tilt:hover {
+  -webkit-transform: rotate(-10deg);
+     -moz-transform: rotate(-10deg);
+       -o-transform: rotate(-10deg);
+      -ms-transform: rotate(-10deg);
+          transform: rotate(-10deg);
+}
+
+/*MORPH*/
+.morph {
+  -webkit-transition: all 0.5s ease;
+     -moz-transition: all 0.5s ease;
+       -o-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+
+.morph:hover {
+  border-radius: 50%;
+  -webkit-transform: rotate(360deg);
+     -moz-transform: rotate(360deg);
+       -o-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+/*SIDEPAN*/
+.sidepan img {
+  margin-left: 0px;
+  -webkit-transition: margin 1s ease;
+     -moz-transition: margin 1s ease;
+       -o-transition: margin 1s ease;
+      -ms-transition: margin 1s ease;
+          transition: margin 1s ease;
+}
+
+.sidepan img:hover {
+  margin-left: -200px;
+}
+
+/*VERTPAN*/
+.vertpan img {
+  margin-top: 0px;
+  -webkit-transition: margin 1s ease;
+     -moz-transition: margin 1s ease;
+       -o-transition: margin 1s ease;
+      -ms-transition: margin 1s ease;
+          transition: margin 1s ease;
+}
+
+.vertpan img:hover {
+  margin-top: -200px;
+}
+
+/*FOCUS*/
+.focus {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.focus:hover {
+  border: 70px solid #000;
+  border-radius: 50%;
+}
+
+/*B&W*/
+.bw {
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.bw:hover {
+  -webkit-filter: grayscale(100%);
+}
+
+/*DARKEN*/
+.brighten img {
+  -webkit-filter: brightness(-65%);
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+.brighten img:hover {
+  -webkit-filter: brightness(0%);
+}
+</style>
+<div class="header">Image Hover Effects - <a href="http://designshack.net/?p=36895">Return to Design Shack</a></div>
+<div class="grow pic">
+<img src="images/country-life.jpg" alt="girl">
+</div>
+<div class="shrink pic">
+<img src="images/country-life.jpg" alt="city">
+</div>
+<div class="sidepan pic">
+<img src="images/country-life.jpg" alt="kick">
+</div>
+<div class="vertpan pic">
+<img src="images/country-life.jpg" alt="climb">
+</div>
+<div class="tilt pic">
+<img src="images/country-life.jpg" alt="">
+</div>
+<div class="morph pic">
+<img src="images/country-life.jpg" alt="">
+</div>
+<div class="focus pic">
+<img src="images/country-life.jpg" alt="">
+</div>
+<div class="blur pic">
+<img src="images/country-life.jpg" alt="plane">
+</div>
+<div class="bw pic">
+<img src="images/country-life.jpg" alt="sea">
+</div>
+<div class="brighten pic">
+<img src="images/country-life.jpg" alt="sea">
+</div>
+<!------------------------------->
+</div><!-bx->
+</div><!-row->
+<!------------------------------->
+</div><!-page->
+</body>
+</html>

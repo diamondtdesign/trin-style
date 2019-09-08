@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+
+<title>CSS Blend Modes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!========================================>
+<!-- CSS -->
+<link href="css/my-trin.css" rel="stylesheet" type="text/css" />
+<style>
+background:
+	linear-gradient(
+		cyan,
+		transparent
+	),
+	linear-gradient(
+		-45deg,
+		magenta,
+		transparent
+	),
+	linear-gradient(
+		45deg,
+		yellow,
+		transparent
+	);
+background-blend-mode: multiply;
+</style>
+<!--------------------------------------------------------->
+<!-- JS -->
+<script src="http://learn.diamondtdesign.com/js/jquery.min.js"></script>
+
+<script src="http://learn.diamondtdesign.com/js/color-grab.js"></script>
+
+<!--------------------------------------------------------->
+<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+<div id="header1">
+<!---------------------------------------------------------------------------->
+<div id="navlist"> 
+<ul> 
+<li><a href="https://www.google.com/+Diamondtdesign-page"><i class="fa fa-google-plus"></i></a></li>
+<li><a href="https://www.facebook.com/diamondtdesign"><i class="fa fa-facebook"></i></a></li>
+<li><a href="http://pinterest.com/hbbmoney/boards/"><i class="fa fa-pinterest"></i></a></li>
+<li><a href="https://twitter.com/McLouthNews"><i class="fa fa-twitter"></i></a></li>
+<li><a href="http://www.stumbleupon.com/stumbler/2ladieshbb"><i class="fa fa-stumbleupon"></i></a></li> 
+</ul> 
+</div>
+<!----------------------------------------------------------------------------> 
+ <div class="logo">
+<h1>This is a Sticky Nav Demo!</h1>
+<p>Other content for your header</p>
+<a href="http://diamondtdesign.com"><img src="css/img/logo-large.png"></a>
+<p>With google search test6</p>
+ </div>
+<!---------------------------------------------------------------------------->
+</div> 
+<!------------------/header ------------------------->
+<!=============================================>
+ <h1 class="google">W3Schools How To</h1>
+<p>https://www.w3schools.com/howto/default.asp</p>
+<hr>
+<div class="navbar">
+  <a href="http://learn.diamondtdesign.com/css/">Home</a>
+  <a href="https://www.w3schools.com">Tutorials</a>
+  <div class="ndropdown">
+    <button class="ndropbtn">Dropdown 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="ndropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div><!--- ndropdown-content --->
+  </div><!--- ndropdown ---> 
+<a class="active" href="#">About</a>
+<a href="http://mclouthnews.com">McLouth News</a>
+<div class="ndropdown">
+    <button class="ndropbtn">Newsletter
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="ndropdown-content">
+      <a href="#">News #1</a>
+      <a href="#">News #2@@@</a>
+      <a href="#">News #3</a>
+    </div><!--- ndropdown-content --->
+  </div><!--- ndropdown --->
+<a href="#">Contact</a>
+</div><!-navbar->
+<hr>
+<!------------------Nav ------------------------->
+<!=============================================>
+ <div class="page">
+<!------------------Place your code here -------------------------->
+<div class="row">
+<div class="bx4">
+<style type="text/css">
+
+
+.blend
+	{
+
+width:100%;
+
+height:450px;
+background:rgba(95,102,148,0.8) url("images/morning.jpg") no-repeat center center;
+
+	}
+.blend2
+	{
+
+width: 100%;
+
+height:410px;
+background:rgba(237,100,113,0.6) url("images/iris-mouse2.jpg") no-repeat center center;
+
+	}
+
+.blend2.soft { 
+background-blend-mode: soft-light; }
+.blend2.screen { background-blend-mode: screen; }
+.blend2.saturation { background-blend-mode: saturation; }
+.blend2.overlay { background-blend-mode: overlay; }
+.blend2.multiply { background-blend-mode: multiply; }
+.blend2.luminosity { background-blend-mode: luminosity; }
+.blend2.lighten { background-blend-mode: lighten; }
+.blend2.hue { background-blend-mode: hue; }
+.blend2.hard { background-blend-mode: hard-light; }
+.blend2.exclusion { background-blend-mode: exclusion; }
+.blend2.dodge { background-blend-mode: color-dodge; }	
+.blend2.difference { background-blend-mode: difference; }
+.blend2.darken { background-blend-mode: darken; }
+.blend2.color { background-blend-mode: color; }
+.blend2.burn { background-blend-mode: color-burn; }
+	
+	.blend.soft
+ { 
+background-blend-mode: soft-light; }
+.blend.screen { background-blend-mode: screen; }
+.blend.saturation { background-blend-mode: saturation; }
+.blend.overlay { background-blend-mode: overlay; }
+.blend.multiply { background-blend-mode: multiply; }
+.blend.luminosity { background-blend-mode: luminosity; }
+.blend.lighten { background-blend-mode: lighten; }
+.blend.hue { background-blend-mode: hue; }
+.blend.hard { background-blend-mode: hard-light; }
+.blend.exclusion { background-blend-mode: exclusion; }
+.blend.dodge { background-blend-mode: color-dodge; }	
+.blend.difference { background-blend-mode: difference; }
+.blend.darken { background-blend-mode: darken; }
+.blend.color { background-blend-mode: color; }
+.blend.burn { background-blend-mode: color-burn; }
+	
+	</style>
+
+
+
+<div class="blend2 soft"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 screen"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 saturation"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 overlay"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 multiply"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 luminosity"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 lighten"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 hue"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 hard"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 exclusion"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 dodge"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 difference"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 darken"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 color"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend2 burn"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+
+<div class="blend soft"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend screen"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend saturation"></div>
+
+
+
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend overlay"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend multiply"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend luminosity"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend lighten"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend hue"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend hard"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend exclusion"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend dodge"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend difference"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend darken"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend color"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<div class="blend burn"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+<div class="row">
+<div class="bx4">
+<!--------------------------------------------------------->
+<style>
+.el-2 {
+    background-image: linear-gradient(to right, #69B62F, #DE3375), url(images/iris-mouse2.jpg);
+    background-blend-mode: overlay;
+}
+</style>
+<div class="blend el-2"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<style>
+.element-4 {
+    background-image: url(images/horse4.jpg), url(images/horse3.jpg);
+    background-color: pink;
+    background-blend-mode: hard-light;
+}
+</style>
+<div class="element element-4"></div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+<div class="bx4">
+<!--------------------------------------------------------->
+<style>
+.element {
+  width: 100%;
+  height: 0;
+  padding-top: 66%;
+}
+
+.element-1 {
+  background-image: url(images/horse4.jpg);
+  background-color: #51B7D3;
+  background-blend-mode: luminosity;
+}
+
+.element-2 {
+  background-image: -webkit-linear-gradient(left, #69B62F, #DE3375), url(images/horse4.jpg);
+  background-image: linear-gradient(to right, #69B62F, #DE3375), url(images/horse3.jpg);
+  background-blend-mode: overlay;
+}
+
+.element-3 {
+  background-image: url(images/horse3.jpg), url(images/horse4.jpg);
+  background-color: #006666;
+  background-blend-mode: hard-light;
+}
+</style>
+<div class="container">
+  <div class="element element-1"></div>
+  <br>
+  <div class="element element-2"></div>
+  <br>
+  <div class="element element-3"></div>
+</div>
+<!--------------------------------------------------------->
+</div> <!-- bx -->
+</div><!-- Row -->
+<hr>
+
+<!========================  STOP  ============================>
+<!===============================================================>
+<!------------------END your code here -------------------------->
+<button onclick="topFunction()" id="toTop" title="Go to top">Top</button>
+</div><!-page->
+<hr>
+<!-- Footer -->
+<footer class="footer1">
+   <p>Copyright &copy; Diamond T Design 2015 | <a href="http://learn.diamondtdesign.com/css/pages/">Free Templates</a> | <a href="http://learn.diamondtdesign.com/css/contact.html">Request Customiztion</a></p>	
+<ul class="social-icons">
+          <li><a href="https://www.google.com/+Diamondtdesign-page"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="https://www.facebook.com/diamondtdesign"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://pinterest.com/hbbmoney/boards/"><i class="fa fa-pinterest"></i></a></li>
+          <li><a href="https://twitter.com/McLouthNews"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="http://www.stumbleupon.com/stumbler/2ladieshbb"><i class="fa fa-stumbleupon"></i></a></li>
+        </ul>
+
+</footer>
+
+<div class="footer2">
+  <p>This is the footer 2!! Resize the browser window to see how the content respond to the resizing.</p>
+</div><!-- footer -->
+
+<div class="footer3">
+  <p>This is the footer!! Resize the browser window to see how the content respond to the resizing.</p>
+</div><!-- footer -->
+<!--------------------------------------------------------->
+<script>
+//scroll to top
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("toTop").style.display = "block";
+    } else {
+        document.getElementById("toTop").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+
+
+</body>
+</html>

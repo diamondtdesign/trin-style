@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" row="IE=edge">
+    <meta name="viewport" row="width=device-width, initial-scale=1">
+<!========================================>
+    <title>Grid-g2 - Diamond T Design</title>
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!========================================>
+<!-- CSS -->
+<link href="css/grid.css" rel="stylesheet" type="text/css" />
+<link href="grid-g.css" rel="stylesheet" type="text/css" />
+<!--------------------------------------------------------->
+<!--------http://www.color-hex.com/color-palette/61889----->
+<!-- CSS -->
+<style type="text/css">
+
+</style>
+<!--------------------------------------------------------->
+<!--------------------------------------------------------->
+</head>
+<body>
+<!=============================================>
+<!=============================================>
+<!--Beginning of row-->
+ <div class="page">
+<!------------------Place your code here -------------------------->
+<!--------------------------------------------------------->
+<div class="container">
+  <main role="main">
+    <div class="row">
+<!--------------------------------------------------------->
+      <div class="bx3">
+<!-------------------------->
+        <style>
+ul.demo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
+
+<p>Default list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+
+<p>Remove bullets, margin and padding:</p>
+<ul class="demo">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Coca Cola</li>
+</ul>
+      </div><!-/bx->
+      <div class="bx9">
+<!==============================================>
+ <img class="bottom" src="images/farmer.jpg" />
+
+<!================3 circle text=====================>3
+<script>
+            function drawTextAlongArc(context, str, centerX, centerY, radius, angle){
+                context.save();
+                context.translate(centerX, centerY);
+                context.rotate(-1 * angle / 2);
+                context.rotate(-1 * (angle / str.length) / 2);
+                for (var n = 0; n < str.length; n++) {
+                    context.rotate(angle / str.length);
+                    context.save();
+                    context.translate(0, -1 * radius);
+                    var char = str[n];
+                    context.fillText(char, 0, 0);
+                    context.restore();
+                }
+                context.restore();
+            }
+             
+            window.onload = function(){
+                var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+                 
+                context.font = "30pt Arial";
+                context.textAlign = "center";
+                 
+                var centerX = canvas.width / 2;
+                var centerY = canvas.height - 30;
+                var angle = Math.PI * 0.8; // radians
+                var radius = 150;
+                drawTextAlongArc(context, "Diamond T Design", centerX, centerY, radius, angle);
+            };
+        </script>
+<canvas id="myCanvas" width="578" height="250"></canvas>
+
+  <img class="top" src="images/barn.jpg" />
+
+<!==============================================>
+    </div><!-/bx->
+  </div><!-- /Row -->
+<hr>
+<div class="row">
+      <div class="bx6">
+<!==============================================>
+<!================5 circle text=====================>5
+<style>
+.circle{
+  width: 10em;
+  height: 10em;
+  border-radius: 5em;
+  background: #accede;
+  margin: 1em;
+  float: left;
+  shape-outside: circle(50%);
+}
+
+.content{
+  max-width: 500px;
+}
+</style>
+
+<div class="circle"></div>
+
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus euismod odio, a interdum elit venenatis non. Vestibulum molestie nisi sapien, vel egestas risus tristique vitae. Etiam non nisi luctus, malesuada nibh eget, viverra ante. Praesent at velit imperdiet enim condimentum consectetur eu sed nisl. Sed lorem dolor, efficitur at efficitur ac, euismod et neque. Nulla sit amet elit sem. Nullam ac malesuada magna, id auctor purus. Praesent viverra fermentum odio.<p>
+</div>
+
+<!==============================================>
+    </div><!-/bx->
+      <div class="bx6">
+<!==============================================>
+<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 243.74 140.55">
+  <path id="curve2" fill="none" d="M23 129c3.92 6.69 11.69 17.44 24 20 7.23 1.5 12.87-.47 21-3 15.1-4.69 33.79-9.73 46-12 15-2.79 32.54-6.06 51 1 11.23 4.3 9.56 7.36 22 12 12.14 4.53 22.59 4.75 43 5 8.26.1 19.54 0 33-1" class="cls-1" transform="translate(-19.55 -60.59)"/>
+<text> 
+    <textPath xlink:href="#curve2" font-size="6">
+      ("hello world")Diamond T Design  Curved Text Looks A Lot Like This, and can curve wherever the path is told to travel.
+    </textPath>
+        
+  </text>
+</svg><!- svg ->
+<!==============================================>
+    </div><!-/bx->
+  </div><!-- /Row -->
+<hr>
+<div class="row">
+      <div class="bx12">
+<!==============================================>
+<!================7 circle text=====================>7
+
+<link rel="stylesheet" href="css/circle-style.css">
+<style>
+/*= GENERAL STYLING  -----------------------------------------------------*/
+
+div.simple { width: 1000px; margin: 10% auto; font-family: 'Viga'; margin: 0; padding: 0;}
+
+div.simple h1{
+color: #fff; 
+text-align: center; 
+text-shadow: 3px 3px 2px rgba(150, 150, 150, 1);
+font-family: 'Viga';
+font-size: 45px;
+}
+
+div.simple p{
+color: #F6933C; 
+text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+line-height:1.33333em;
+font-size:2.25em;
+line-height:1.33333em;
+margin: 0;
+padding: 0;
+}
+
+div.simple span { 
+color: #F6933C; 
+text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+line-height:1.33333em;
+font-size:2.25em;
+line-height:1.33333em;
+}
+
+div.simple ul { width: 960px; margin: 20px auto; }
+div.simple li { float: left; position: relative;  list-style: none;} 
+</style>
+<div class="simple">
+<ul>
+<li id="simple_arc">
+<span class="w0">S</span>
+<span class="w1">I</span>
+<span class="w2">M</span>
+<span class="w3">P</span>
+<span class="w4">L</span>
+<span class="w5">E</span>
+<span class="w6"> </span>
+<span class="w7">A</span>
+<span class="w8">R</span>
+<span class="w9">C</span>
+</li>
+<li id="reversed_arc">
+<span class="w0">R</span>
+<span class="w1">E</span>
+<span class="w2">V</span>
+<span class="w3">E</span>
+<span class="w4">R</span>
+<span class="w5">S</span>
+<span class="w6">E</span>
+<span class="w7">D</span>
+<span class="w8"> </span>
+<span class="w9">A</span>
+<span class="w10">R</span>
+<span class="w11">C</span>
+</li>
+<li id="auto_radius">
+<span class="w0">A</span>
+<span class="w1">U</span>
+<span class="w2">T</span>
+<span class="w3">O</span>
+<span class="w4"> </span>
+<span class="w5">R</span>
+<span class="w6">A</span>
+<span class="w7">D</span>
+<span class="w8">I</span>
+<span class="w9">U</span>
+<span class="w10">S</span>
+<span class="w11"> </span>
+<span class="w12">T</span>
+<span class="w13">E</span>
+<span class="w14">X</span>
+<span class="w15">T</span>
+<span class="w16"> </span>
+<span class="w17">A</span>
+<span class="w18">L</span>
+<span class="w19">L</span>
+<span class="w20"> </span>
+<span class="w21">O</span>
+<span class="w22">V</span>
+<span class="w23">E</span>
+<span class="w24">R</span>
+<span class="w25"> </span>
+</li>
+<li id="auto_radius">
+<span class="w0">A</span>
+<span class="w1">U</span>
+<span class="w2">T</span>
+<span class="w3">O</span>
+<span class="w4"> </span>
+<span class="w5">R</span>
+<span class="w6">A</span>
+<span class="w7">D</span>
+<span class="w8">I</span>
+<span class="w9">U</span>
+<span class="w10">S</span>
+<span class="w11"> </span>
+<span class="w12"> </span>
+<span class="w13">T</span>
+<span class="w14">E</span>
+<span class="w15">X</span>
+<span class="w16">T</span>
+<span class="w17"> </span>
+<span class="w18"> </span>
+<span class="w19">A</span>
+<span class="w20">L </span>
+<span class="w21">L</span>
+<span class="w22"> </span>
+</li>
+</ul>
+</div>
+<!==============================================>
+    </div><!-/bx->
+  </div><!-- /Row -->
+
+</main><!-- Main -->
+<!--------------------------------------------------------->
+</div><!-- /Container -->
+<!--------------------------------------------------------->
+<!------------------END your code here -------------------------->
+</div><!-page->
+<style>
+/** Footer Styles **/
+.footer {
+        position: relative;
+        clear: both;
+        margin:0 auto;
+        background:#f08080;
+	border:1px solid #c06666;
+	color: #80f0f0;
+        text-align: center;
+}
+.footer2 {
+  position: relative;
+  clear: both;
+  margin:0 auto;
+  background:#80f0f0;
+  border:1px solid #59a8a8;
+  color: #f08080;
+  text-align: center;
+}
+</style>
+<div class="footer">
+  <p>This is the footer!! Resize the browser window to see how the content respond to the resizing.</p>
+</div><!-- footer -->
+<div class="footer2">
+  <p>This is the footer 2!! Resize the browser window to see how the content respond to the resizing.</p>
+</div><!-- footer -->
+</body>
+</html>

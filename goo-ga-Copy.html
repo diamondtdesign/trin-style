@@ -1,0 +1,1638 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Goo Ga 2</title>
+    
+<link rel="stylesheet" href="css/grid.css">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!======================================================>
+</head>
+<body>
+<style>
+img {
+    max-width: 100%;
+    height: auto;
+}
+</style>
+<!========================================>
+<div class="page">
+<div class="row>
+
+<!======================================================>
+  <div class="bx6">
+<style>
+img.test-1{
+    border-radius: 8px;
+}
+img.test-2 {
+    border-radius: 50%;
+}
+img.test-3 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+
+<h2>Rounded Images</h2>
+<p>Use the border-radius property to create rounded images:</p>
+
+<img class="test-1" src="images/farmer-hands.jpg" alt="Paris" width="300" height="300">
+
+<h2>Rounded Images</h2>
+<p>Use the border-radius property to create circled images:</p>
+
+<img class="test-2" src="images/farmer-hands.jpg" alt="Paris" width="300" height="300">
+<h2>Centered Images</h2>
+<img class="test-3" src="images/farmer-hands.jpg" alt="Paris" style="width:50%">
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.p-container {
+  text-align: center;
+  padding: 10px 20px;
+}
+</style>
+
+<h2>Responsive Polaroid Images / Cards</h2>
+
+  <div class="bx6">
+<div class="polaroid">
+  <img src="images/next-day.jpg" alt="Norway" style="width:100%">
+  <div class="p-container">
+    <p>polaroid</p>
+  </div>
+</div>
+ </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<div class="polaroid">
+  <img src="images/next-day.jpg" alt="Norway" style="width:100%">
+  <div class="p-container">
+    <p>polaroid</p>
+  </div>
+</div>
+ </div><!- bx ->
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<!------------------------------------------------>
+<style>
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+</style>
+
+<h2>Image Modal</h2>
+<p>In this example, we use CSS to create a modal (dialog box) that is hidden by default.</p>
+<p>We use JavaScript to trigger the modal and to display the current image inside the modal when it is clicked on. Also note that we use the value from the image's "alt" attribute as an image caption text inside the modal.</p>
+<p>Don't worry if you do not understand the code right away. When you are done with CSS, go to our JavaScript Tutorial to learn more.</p>
+
+<img id="myImg" src="images/next-day.jpg" alt="Northern Lights, Norway" width="300" height="200">
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+<h2>Slider</h2>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/next-day.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/barn.jpg" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/farmer.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.tcontainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+</style>
+
+<h2>Image Text</h2>
+<p>How to place text over an image:</p>
+
+<div class="tcontainer">
+  <img src="images/8th-day.jpg" alt="Snow" style="width:100%;">
+  <div class="bottom-left">Bottom Left</div>
+  <div class="top-left">Top Left</div>
+  <div class="top-right">Top Right</div>
+  <div class="bottom-right">Bottom Right</div>
+  <div class="centered">Centered</div>
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.tbcontainer {
+    position: relative;
+    font-family: Arial;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+</style>
+<h2>Image Text Blocks</h2>
+<p>How to place text blocks over an image:</p>
+
+<div class="tbcontainer">
+  <img src="images/barn-wide.jpg" alt="Nature" style="width:100%;">
+  <div class="text-block">
+    <h4>Nature</h4>
+    <p>What a beautiful sunrise</p>
+  </div>
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+
+.trcontainer {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.trcontainer img {vertical-align: middle;}
+
+.trcontainer .trcontent {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+</style>
+
+<div class="trcontainer">
+  <img src="images/next-day.jpg" alt="Notebook" style="width:100%;">
+  <div class="trcontent">
+    <h1>Heading</h1>
+    <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+  </div>
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+img.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 200px;
+}
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: yellow;
+    padding: 50px;
+    font-size: 20px;
+}
+</style>
+
+<h2>Sticky Image: Scroll Down to See the Effect</h2>
+<p>The image will "stick" to the screen when you reach its scroll position.</p>
+<img class="sticky" src="images/next-day.jpg" alt="Avatar">
+<h2>Scroll Down</h2>
+<p>Some example text..</p>
+<p><b>Scroll back up again to "remove" the sticky position.</b></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.</p>
+<div class="sticky">I will stick to the screen when you reach my scroll position</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<style>
+<!------------------------------------------------>
+.img-zoom-container {
+  position: relative;
+}
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 600px;
+  height: 600px;
+}
+</style>
+<script>
+function imageZoom(imgID, resultID) {
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+<h1>Image Zoom</h1>
+
+<p>Mouse over the image:</p>
+
+<div class="img-zoom-container">
+  <img id="myimage" src="images/next-day.jpg" width="300" height="200">
+  <div id="myresult" class="img-zoom-result"></div>
+</div>
+
+<p>The image must be placed inside a contianer with relative positioning.</p>
+<p>The result can be put anywhere on the page, but must have the class name "img-zoom-result".</p>
+<p>Make sure both the image and the result have IDs. These IDs are used when a javaScript initiates the zoom effect.</p>
+
+<script>
+// Initiate zoom effect:
+imageZoom("myimage", "myresult");
+</script>
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+div.example {
+  background-color: lightgrey;
+  padding: 20px;
+}
+
+@media screen and (min-width: 601px) {
+  div.example {
+    font-size: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    font-size: 30px;
+  }
+}
+</style>
+
+<h2>Change the font size of an element on different screen sizes</h2>
+
+<div class="example">Example DIV.</div>
+
+<p>When the browser's width is 600px wide or less, set the font-size of DIV to 30px. When it is 601px or wider, set the font-size to 80px. Resize the browser window to see the effect.</p>
+
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.equal-container {
+    display: table;
+    width: 100%;
+}
+.equal {
+    display: table-cell;
+    padding: 16px;
+}
+</style>
+
+
+<h2>Equal Height Columns</h2>
+<p>Make the columns match the height of the tallest column.</p>
+
+<div class="equal-container">
+  <div class="equal" style="background:orange">
+    <h2>Column 1</h2>
+    <p>Hello World</p>
+  </div>
+
+  <div class="equal" style="background:yellow">
+    <h2>Column 2</h2>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+    <p>Hello World!</p>
+  </div>
+
+  <div class="equal" style="background:orange">
+    <h2>Column 3</h2>
+    <p>Some other text..</p>
+    <p>Some other text..</p>
+  </div>
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.fix  {
+    border: 3px solid #4CAF50;
+    padding: 5px;
+}
+
+.img1 {
+    float: right;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.img2 {
+    float: right;
+}
+</style>
+
+<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+<div class="fix">
+<img class="img1" src="images/next-day.jpg" alt="Pineapple" width="170" height="170">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+
+<p style="clear:right">Add a clearfix class with overflow: auto; to the containing element, to fix this problem:</p>
+
+<div class="clearfix">
+<img class="img2" src="images/next-day.jpg" alt="Pineapple" width="170" height="170">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.parallax {
+    /* The image used */
+    background-image: url('images/opportunity.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+</style>
+<!--https://www.w3schools.com/howto/tryhow_css_parallax_demo.htm -->
+<div class="parallax"></div>
+
+<div style="height:1000px;background-color:red;font-size:36px">
+Scroll Up and Down this page to see the parallax scrolling effect.
+This div is just here to enable scrolling.
+Tip: Try to remove the background-attachment property to remove the scrolling effect.
+</div>
+
+<div class="parallax"></div>
+
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+#hide {
+    width: 100%;
+    padding: 50px 0;
+    text-align: center;
+    background-color: lightblue;
+    margin-top: 20px;
+}
+</style>
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="hide">
+This is my DIV element.
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("hide");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.square {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+}
+.circle {
+  height: 50px;
+  width: 50px;
+  background-color: #555;
+  border-radius: 50%;
+}
+.oval {
+  height: 50px;
+  width: 100px;
+  background-color: #555;
+  border-radius: 50%;
+}
+.trapezoid {
+	border-bottom: 50px solid #555;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
+.rectangle {
+  height: 50px;
+  width: 100px;
+  background-color: #555;
+}
+.parallelogram {
+	width: 100px;
+	height: 50px;
+	transform: skew(20deg);
+	background: #555;
+}
+
+.triangle-up {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-bottom: 50px solid #555;
+}
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #555;
+}
+
+.triangle-left {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-right: 50px solid #555;
+	border-bottom: 25px solid transparent;
+}
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+}
+</style>
+
+<h2>Triangle Right CSS</h2>
+<div class="triangle-right"></div>
+
+
+<h2>Triangle Left CSS</h2>
+<div class="triangle-left"></div>
+
+
+<h2>Triangle Down CSS</h2>
+<div class="triangle-down"></div>
+
+<h2>Triangle Up CSS</h2>
+<div class="triangle-up"></div>
+
+
+<h2>Parallelogram CSS</h2>
+<div class="parallelogram"></div>
+
+
+<h2>Rectangle CSS</h2>
+<div class="rectangle"></div>
+
+<h2>Trapezoid CSS</h2>
+<div class="trapezoid "></div>
+
+
+<h2>Oval CSS</h2>
+<div class="oval"></div>
+
+<h2>Circle CSS</h2>
+<div class="circle"></div>
+
+<h2>Square CSS</h2>
+<div class="square"></div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+#grad5 {
+    height: 150px;
+    width: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: radial-gradient(red 5%, yellow 15%, green 60%); /* Standard syntax (must be last) */
+}
+#grad6 {
+    height: 150px;
+    width: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: radial-gradient(red, yellow, green); /* Standard syntax (must be last) */
+}
+#grad1 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: repeating-linear-gradient(red, yellow 10%, green 20%); /* Standard syntax (must be last) */
+}
+
+#grad2 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: repeating-linear-gradient(45deg,red,yellow 7%,green 10%); /* Standard syntax (must be last) */
+}
+
+#grad3 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: repeating-linear-gradient(190deg,red,yellow 7%,green 10%); /* Standard syntax (must be last) */
+}
+
+#grad4 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: repeating-linear-gradient(90deg,red,yellow 7%,green 10%); /* Standard syntax (must be last) */
+}
+
+#grad7 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+}
+#grad8 {
+    height: 55px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+}
+
+#grad9 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(red, yellow, green); /* Standard syntax (must be last) */
+}
+
+#grad10 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+}
+
+#grad11 {
+    height: 200px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(red 10%, green 85%, blue 90%); /* Standard syntax (must be last) */
+}
+#grad12 {
+    height: 100px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(0deg, red, yellow); /* Standard syntax (must be last) */
+}
+
+#grad13 {
+    height: 100px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(90deg, red, yellow); /* Standard syntax (must be last) */
+}
+
+#grad14 {
+    height: 100px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(180deg, red, yellow); /* Standard syntax (must be last) */
+}
+
+#grad15 {
+    height: 100px;
+    background: red; /* For browsers that do not support gradients */
+    background: linear-gradient(-90deg, red, yellow); /* Standard syntax (must be last) */
+}
+</style>
+
+<h1>Linear Gradients - Using Different Angles</h1>
+
+<div id="grad12" style="text-align:center;">0deg</div><br>
+<div id="grad13" style="text-align:center;">90deg</div><br>
+<div id="grad14" style="text-align:center;">180deg</div><br>
+<div id="grad15" style="text-align:center;">-90deg</div>
+<h1>Linear Gradients - Multiple Color Stops</h1>
+
+<h3>3 Color Stops (evenly spaced):</h3>
+<div id="grad9"></div>
+
+<h3>7 Color Stops (evenly spaced):</h3>
+<div id="grad10"></div>
+
+<h3>3 Color Stops (not evenly spaced):</h3>
+<div id="grad11"></div>
+
+<p><strong>Note:</strong> Color stops are automatically spaced evenly when no percents are specified.</p>
+
+<div id="grad8" style="text-align:center;margin:auto;color:#888888;font-size:40px;font-weight:bold">
+Gradient Background
+</div>
+
+<h1>Linear Gradient - Transparency</h1>
+<p>To add transparency, we use the rgba() function to define the color stops. The last parameter in the rgba() function can be a value from 0 to 1, and it defines the transparency of the color: 0 indicates full transparency, 1 indicates full color (no transparency).</p>
+
+<div id="grad7"></div>
+
+<h1>Repeating Linear Gradient</h1>
+
+<div id="grad5"></div>
+
+<p>A repeating gradient on 45deg axe starting red and finishing green:</p>
+<div id="grad6"></div>
+
+<p>A repeating gradient on 190deg axe starting red and finishing green:</p>
+<div id="grad3"></div>
+
+<p>A repeating gradient on 90deg axe starting red and finishing green:</p>
+<div id="grad4"></div>
+
+
+<h1>Radial Gradient - Evenly Spaced Color Stops</h1>
+
+<div id="grad2"></div>
+
+<h1>Radial Gradient - Differently Spaced Color Stops</h1>
+
+<div id="grad1"></div>
+
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.transition {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s;
+}
+.transition:hover {
+    width: 300px;
+}
+.transition2 {
+    width: 100px;
+    height: 100px;
+    background: pink;
+    -webkit-transition: width 2s, height 4s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s;
+}
+
+.transition2:hover {
+    width: 300px;
+    height: 300px;
+}
+#transitions {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s; /* Safari */
+    transition: width 2s;
+}
+
+/* For Safari 3.1 to 6.0 */
+#transitions1 {-webkit-transition-timing-function: linear;}
+#transitions2 {-webkit-transition-timing-function: ease;}
+#transitions3 {-webkit-transition-timing-function: ease-in;}
+#transitions4 {-webkit-transition-timing-function: ease-out;}
+#transitions5 {-webkit-transition-timing-function: ease-in-out;}
+
+/* Standard syntax */
+#transitions1 {transition-timing-function: linear;}
+#transitions2 {transition-timing-function: ease;}
+#transitions3 {transition-timing-function: ease-in;}
+#transitions4 {transition-timing-function: ease-out;}
+#transitions5 {transition-timing-function: ease-in-out;}
+
+transitions:hover {
+    width: 300px;
+}
+#TransTrans{
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+    transition: width 2s, height 2s, transform 2s;
+}
+
+#TransTrans:hover {
+    width: 300px;
+    height: 300px;
+    -webkit-transform: rotate(180deg); /* Safari */
+    transform: rotate(180deg);
+}
+</style>
+
+<h1>Transition + Transform</h1>
+
+<p>Hover over the div element below:</p>
+
+<div id="#TransTrans"></div>
+
+<h1>The transition-timing-function Property</h1>
+
+<p>Hover over the div elements below, to see the different speed curves:</p>
+
+<div id="transitions transitions1">linear</div><br>
+<div id="transitions transitions2">ease</div><br>
+<div id="transitions transitions3">ease-in</div><br>
+<div id="transitions transitions4">ease-out</div><br>
+<div id="transitions transitions5">ease-in-out</div><br>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+
+<div class="transition2"></div>
+
+<h1>The transition Property</h1>
+
+<p>Hover over the div element below, to see the transition effect:</p>
+<div class="transition"></div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style> 
+.animation1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: animation1; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: animation;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation1 {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+/* Standard syntax */
+@keyframes animation1 {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.animation2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation: animation2 5s linear 2s infinite alternate; /* Safari 4.0 - 8.0 */
+    animation: myfirst 5s linear 2s infinite alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation2 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes animation2 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+.animation3 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: animation3;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    /* Standard syntax */
+    animation-name: animation3;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation3 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes animation3 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+.animation4 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation-name: animation4;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+    animation-name: animation4;
+    animation-duration: 3s;    
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation4 {
+    from {top: 0px; background-color: yellow;}
+    to {top: 200px; background-color: blue;}
+}
+
+@keyframes animation4 {
+    from {top: 0px; background-color: yellow;}
+    to {top: 200px; background-color: blue;}
+}
+.animation5 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    -webkit-animation-name: animation5;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: backwards; /* Safari 4.0 - 8.0 */
+    animation-name: animation5;
+    animation-duration: 3s;    
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation5 {
+    from {top: 0px; background-color: yellow;}
+    to {top: 200px;}
+}
+
+@keyframes animation5 {
+    from {top: 0px; background-color: yellow;}
+    to {top: 200px;}
+} 
+#animations {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    font-weight: bold;
+    position: relative;
+    -webkit-animation: animations 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: mymove 5s infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+#animation6 {-webkit-animation-timing-function: linear;}
+#animation7 {-webkit-animation-timing-function: ease;}
+#animation8 {-webkit-animation-timing-function: ease-in;}
+#animation9 {-webkit-animation-timing-function: ease-out;}
+#.animation10 {-webkit-animation-timing-function: ease-in-out;}
+
+/* Standard syntax */
+#.animation6 {animation-timing-function: linear;}
+#.animation7 {animation-timing-function: ease;}
+#.animation8 {animation-timing-function: ease-in;}
+#.animation9 {animation-timing-function: ease-out;}
+#.animation10 {animation-timing-function: ease-in-out;}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animations {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+
+/* Standard syntax */
+@keyframes animations {
+    from {left: 0px;}
+    to {left: 300px;}
+}
+.animation11 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: animation11; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate-reverse; /* Safari 4.0 - 8.0 */
+    animation-name: animation11;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate-reverse;    
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation11 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes animation11 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+.animation12 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: animation12; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: 2; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate; /* Safari 4.0 - 8.0 */
+    animation-name: animation12;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;    
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation12 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes animation12 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+.animation13 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: animation13; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: animation13;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation13 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes animation13 {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+.animation14 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    -webkit-animation-name: animation14; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation14 {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes animation14 {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+</style>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div class="animation14"></div>
+<!-------->
+<div class="animation13"></div>
+<!-------->
+<div class="animation12"></div>
+<!-------->
+<div class="animation11"></div>
+<!-------->
+<div id="animations animation10">linear</div>
+<div id="animations animation9">ease</div>
+<div id="animations animation8">ease-in</div>
+<div id="animations animation7">ease-out</div>
+<div id="animations animation6">ease-in-out</div>
+<!-------->
+<p>Let the div element get the style values set by the first keyframe before the animation starts (during the animation-delay period):</p>
+<div class="animation5"></div>
+<!-------->
+<p>Let the div element get the style values set by the first keyframe before the animation starts, and retain the style values from the last keyframe when the animation ends:</p>
+<div class="animation4"></div>
+<!-------->
+<div class="animation3"></div>
+<!-------->
+<div class="animation2"></div>
+<!-------->
+<div class="animation1"></div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+.user1{
+    border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+    resize: horizontal;
+    overflow: auto;
+}
+/*----------------------------*/
+
+.user2 {
+    border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+    resize: horizontal;
+    overflow: auto;
+}
+/*----------------------------*/
+ 
+.user3 {
+    border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+    resize: vertical;
+    overflow: auto;
+}
+/*----------------------------*/
+ 
+.user4 {
+    border: 2px solid;
+    padding: 20px; 
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+</style>
+
+<h1>The resize Property</h1>
+
+<div class="user4">
+<p>Let the user resize both the height and the width of this div element.</p>
+<p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+-----------------------------
+<h1>The resize Property</h1>
+
+<div class="user3">
+<p>Let the user resize only the height of this div element.</p>
+<p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+
+---------------------
+<h1>The resize Property</h1>
+
+<div class="user2">
+<p>Let the user resize only the width of this div element.</p>
+<p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+----------------------
+<h1>The resize Property</h1>
+
+<div class="user1">
+<p>Let the user resize only the width of this div element.</p>
+<p>To resize: Click and drag the bottom right corner of this div element.</p>
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx6">
+<!------------------------------------------------>
+<style>
+</style>
+
+</div>
+<!------------------------------------------------>
+  </div><!- bx ->
+  </div><!- row ->
+<hr>
+  <div class="row">
+  <div class="bx12">
+<!------------------------------------------------>
+
+<style>
+img .filters {
+    width: 100%;
+    height: auto;
+    float: left; 
+    max-width: 100%;
+}
+
+.blur {-webkit-filter: blur(4px);filter: blur(4px);}
+.brightness {-webkit-filter: brightness(250%);filter: brightness(250%);}
+.contrast {-webkit-filter: contrast(180%);filter: contrast(180%);}
+.grayscale {-webkit-filter: grayscale(100%);filter: grayscale(100%);}
+.huerotate {-webkit-filter: hue-rotate(180deg);filter: hue-rotate(180deg);}
+.invert {-webkit-filter: invert(100%);filter: invert(100%);}
+.opacity {-webkit-filter: opacity(50%);filter: opacity(50%);}
+.saturate {-webkit-filter: saturate(7); filter: saturate(7);}
+.sepia {-webkit-filter: sepia(100%);filter: sepia(100%);}
+.shadow {-webkit-filter: drop-shadow(8px 8px 10px green);filter: drop-shadow(8px 8px 10px green);}
+</style>
+
+<p><strong>Note:</strong> The filter property is not supported in Internet Explorer, Edge 12, or Safari 5.1 and earlier.</p>
+
+<div class="bx2"><img class="filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="blur filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="brightness filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="contrast filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="grayscale filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="huerotate filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="invert filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="opacity filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="saturate filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="sepia filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<div class="bx2"><img class="shadow filters" src="images/next-day.jpg" alt="Pineapple"></div><!- bx ->
+<!------------------------------------------------>
+ </div><!- bx ->
+<!======================================================>
+<!======================================================>
+ </div><!- row ->
+</div><!- page ->
+<!======================================================>
+<!======================================================>
+<!--Beginning of footer-->
+<div class="footer">
+	<div class="wrap">
+            <p>Copyright &copy; Diamond T Design 2015 | <a href="http://learn.diamondtdesign.com/css//pages/">Free Templates</a> | <a href="http://learn.diamondtdesign.com/css//contact.html">Request Customiztion</a></p>	
+<ul class="social-icons">
+          <li><a href="https://www.google.com/+Diamondtdesign-page"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="https://www.facebook.com/diamondtdesign"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="http://pinterest.com/hbbmoney/boards/"><i class="fa fa-pinterest"></i></a></li>
+          <li><a href="https://twitter.com/McLouthNews"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="http://www.stumbleupon.com/stumbler/2ladieshbb"><i class="fa fa-stumbleupon"></i></a></li>
+        </ul>
+    </div>
+</div>
+<!======================================================>
+</body>
+</html>

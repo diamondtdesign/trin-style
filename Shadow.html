@@ -1,0 +1,239 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trin Kitchen Sink</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!========================================>
+<link href="css/grid.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="css/compiled.min.css" rel="stylesheet">
+
+<style type="text/css">
+/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}
+@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}
+.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}
+</style>
+        </head>
+
+<style type="text/css">
+.color-block h5 {
+            font-size: 1rem;
+        }
+
+        .dynamic-color p {
+            font-size: 0.75rem
+        }
+
+ </style>   
+<!--==================================================================================-->
+
+<body>                           <!--Section: Doc content-->
+<section class="documentation">
+
+    <style>
+        .documentation .shadow-box-example {
+            height: 120px;
+            width: 100%;
+            background-color: #64b5f6;
+        }
+    </style>
+
+    <!--Section: Intro-->
+    <section id="introduction">
+
+        <!--Title-->
+        <h1 class="main-title">Bootstrap shadows / Material Design shadows</h1>
+
+        <!--Description-->
+        <p>Bootstrap shadow is an effect used in web elements which provides important visual cues about objects' depth and
+            directional movement.
+        </p>
+
+        <p>They are the only visual cue indicating the amount of separation between surfaces. An object’s elevation determines
+            the appearance of its shadow.
+        </p>
+
+        <p class="description">
+            <strong>Creating shadows with MDB is very easy. You only need to add one of the shadow classes to chosen element.</strong>
+        </p>
+
+    </section>
+    <!--/Section: Intro-->
+
+    <hr class="my-5">
+
+    <!--Section: -->
+    <section id="examples">
+
+        <!--Title-->
+        <h2 class="title">
+            <strong>Examples</strong>
+        </h2>
+
+        <!--Description-->
+        <p class="description">Add one of the following classes to any html element to achieve a desired depth of the shadow</p>
+
+        <!--Section: Live preview-->
+        <section>
+
+            <div class="row mb-4">
+
+                <div class="bx4">
+                    <div class="shadow-box-example z-depth-1 flex-center">
+                        <p class="white-text">.z-depth-1</p>
+                    </div>
+                </div>
+
+                <div class="bx4">
+                    <div class="shadow-box-example z-depth-1-half flex-center">
+                        <p class="white-text">.z-depth-1-half</p>
+                    </div>
+                </div>
+
+                <div class="bx4">
+                    <div class="shadow-box-example z-depth-2 flex-center">
+                        <p class="white-text">.z-depth-2</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row mb-5">
+
+                <div class="bx4">
+                    <div class="shadow-box-example z-depth-3 flex-center">
+                        <p class="white-text">.z-depth-3</p>
+                    </div>
+                </div>
+
+                <div class="bx4">
+                    <div class="shadow-box-example z-depth-4 flex-center">
+                        <p class="white-text">.z-depth-4</p>
+                    </div>
+                </div>
+
+                <div class="bx4">
+                    <div class="shadow-box-example z-depth-5 flex-center">
+                        <p class="white-text">.z-depth-5</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <div class="code-toolbar"><pre class="code-toolbar language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example z-depth-5<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    .z-depth-5
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="btn-copy-code btn btn-outline-grey btn-sm px-2 waves-effect"><i class="fa fa-copy mr-1"></i> Copy code</button></div></div></div>
+        </section>
+        <!--Section: Code-->
+
+        <blockquote class="blockquote bq-primary">
+            <p class="bq-title">.z-depth-0</p>
+            <p>To remove existing shadow from given element use class
+                <code>.z-depth-0</code>
+            </p>
+        </blockquote>
+
+        <!--Subtitle-->
+        <h4 class="mt-5">Shadow on hover</h4>
+
+        <!--Section: Live preview-->
+        <section>
+
+            <div class="row my-4">
+                <div class="bx4">
+                    <div class="shadow-box-example hoverable flex-center">
+                        <p class="white-text">hover me!</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <div class="code-toolbar"><pre class="code-toolbar language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example hoverable<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    hover me!
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="btn-copy-code btn btn-outline-grey btn-sm px-2 waves-effect"><i class="fa fa-copy mr-1"></i> Copy code</button></div></div></div>
+        </section>
+        <!--Section: Code-->
+
+        <!--Subtitle-->
+        <h4 class="mt-5">Images with shadow</h4>
+
+        <!--Section: Live preview-->
+        <section>
+
+            <!--Grid row-->
+            <div class="row my-5">
+
+                <!--Grid column-->
+                <div class="col-lg-4 bx12">
+                    <img src="images/barn.jpg" class="img-fluid z-depth-2 rounded" alt="First sample image">
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 bx6">
+                    <img src="images/barn.jpg" class="img-fluid z-depth-3 rounded" alt="First sample image">
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 bx6">
+                    <img src="images/barn.jpg" class="img-fluid z-depth-4 rounded" alt="First sample image">
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Live preview-->
+
+        <!--Section: Code-->
+        <section>
+            <div class="code-toolbar"><pre class="code-toolbar language-markup"><code class=" language-markup"><span class="token comment">&lt;!--Grid row--&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>row my-4<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!--Grid column--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col-lg-4 bx12<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://mdbootstrap.com/img/Photos/Others/images/81.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>img-fluid z-depth-2 rounded<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>First sample image<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--Grid column--&gt;</span>
+
+    <span class="token comment">&lt;!--Grid column--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col-lg-4 bx6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://mdbootstrap.com/img/Photos/Others/images/81.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>img-fluid z-depth-3 rounded<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>First sample image<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--Grid column--&gt;</span>
+
+    <span class="token comment">&lt;!--Grid column--&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col-lg-4 bx6<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://mdbootstrap.com/img/Photos/Others/images/81.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>img-fluid z-depth-4 rounded<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>First sample image<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!--Grid column--&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!--Grid row--&gt;</span></code></pre><div class="toolbar"><div class="toolbar-item"><button class="btn-copy-code btn btn-outline-grey btn-sm px-2 waves-effect"><i class="fa fa-copy mr-1"></i> Copy code</button></div></div></div>
+        </section>
+        <!--Section: Code-->
+
+    </section>
+    <!--/Section: -->
+
+</section>
+<!--/Section: Doc content--><!--?                        </div-->
+                </div>
+                        <!--/.Main column-->
+                                                    </div></div></body></html>
