@@ -1,0 +1,1090 @@
+﻿
+/*##################################################*/
+/*################# Image classes ##################*/
+/*##################################################*/
+
+/* -----------------diamonds  ------------------ */
+.diamond-big
+{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+
+    /* rotate diamond */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.label {
+    /* counter rotate label */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    /* position label */
+    margin-top:80px;
+    margin-left:-20px;
+}
+.diamond-big:before
+{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+
+    /* counter rotate bg */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* set bg for different DJs */
+.diamond-tiesto:before {
+        background: url(old-farmer.jpg) 0 0 repeat;
+}
+/* -----------------/diamonds  ------------------ */
+/* -----------------  hexagon  ------------------ */
+.hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  margin: 86.60px 0;
+  background-image: url(old-farmer.jpg);
+  background-size: auto 346.4102px;
+  background-position: center;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 212.13px;
+  height: 212.13px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 43.93px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 300.0000px;
+  height: 173.20508075688775px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -106.0660px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -106.0660px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 300.0000px;
+  height: 173.2051px;
+  z-index: 2;
+  background: inherit;
+}
+
+/* -----------------/ hexagon  ------------------ */
+/* ----------------- circle  ------------------ */
+.block {
+    width: 400px;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+#circle {
+   border-radius: 50%;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+}
+/* ----------------- /circle  ------------------ */
+/* ----------------- triangle  ------------------ */
+.triangle img { display: block; }
+
+.triangle { 
+   position   : relative; 
+   overflow   : hidden; 
+   padding    : 0; margin: 0; 
+   display    : inline-block; 
+}
+
+.triangle:after,
+.triangle:before {
+   content    : "";
+   position   : absolute;
+   z-index    : 2;
+   left       : -50%;
+   width      : 200%;
+   height     : 40%;
+   display    : block;
+   background : #fff;   
+}
+
+.triangle:before {
+    top: -24%;  
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.triangle:after {
+    bottom: -24%;  
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+/* ----------------- /triangle  ------------------ */
+/* ----------------- pageOption  ------------------ */
+.pageOption {
+  overflow: hidden;
+  position: relative;
+  width: 30em;
+ height: 20em;
+}
+.option, .option img { width: 100%; height: 100%; }
+.option {
+  overflow: hidden;
+  position: absolute;  
+  /* arctan(27 / 40) = 34.01935deg 
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg);
+}
+.option:first-child {
+  left: -.25em;
+  transform-origin: 100% 0;
+}
+.option:last-child {
+  right: -.25em;
+  transform-origin: 0 100%;
+}
+.option img {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+/* ----------------- /pageOption  ------------------ */
+/* ----------------- shapes  ------------------ */
+.test1 {
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    /* Rotate div */
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+.test2 {
+    width: 400px;
+    height: auto;
+background-color:lightblue;
+    transform:skew(170deg,170deg);
+}
+.test3 {
+    width: 400px;
+    height: auto;
+    background-color:lightblue;
+    transform:rotateZ(25deg);
+}
+/*##################################################*/
+
+.img-rounded {
+  border-radius: 6px;
+}
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.42857143;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.img-circle {
+  border-radius: 50%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/*##################################################*/
+/*################# W3 Image classes ##################*/
+/*##################################################*/
+.w3-circle{border-radius:50% !important}
+
+.w3-round-small{border-radius:2px !important}
+.w3-round,.w3-round-medium{border-radius:4px !important}
+.w3-round-large{border-radius:8px !important}
+.w3-round-xlarge{border-radius:16px !important}
+.w3-round-xxlarge{border-radius:32px !important}
+.w3-round-jumbo{border-radius:64px !important}
+
+.w3-image{position:relative}
+.w3-image img{max-width:100%;height:auto}
+.w3-image .w3-title{position:absolute;bottom:8px;left:16px;color:#fff;font-size:20px}
+
+.w3-text-white{color:#fff !important}.w3-white{color:#000 !important;background-color:#fff !important}
+.w3-text-black{color:#000 !important}.w3-black{color:#fff !important;background-color:#000 !important}
+.w3-text-white-opacity{color:rgba(255,255,255,0.65) !important}
+.w3-text-black-opacity{color:rgba(0,0,0,0.60) !important}
+
+.w3-card{border:1px solid #ccc}
+.w3-card-2,.w3-example{box-shadow:0 2px 4px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12) !important}
+.w3-card-4{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important}
+.w3-card-8{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important}
+.w3-card-12{box-shadow:0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19) !important}
+.w3-card-16{box-shadow:0 16px 24px 0 rgba(0,0,0,0.22),0 25px 55px 0 rgba(0,0,0,0.21) !important}
+.w3-card-24{box-shadow:0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22) !important}
+
+/*#####################################################*/
+/*#####################################################*/
+/*################# 6.  Image classes #################*/
+
+/* -----------------diamonds  ------------------ */
+.diamond-big
+{
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+
+    /* rotate diamond */
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.label {
+    /* counter rotate label */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+
+    /* position label */
+    margin-top:80px;
+    margin-left:-20px;
+}
+.diamond-big:before
+{
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+
+    /* counter rotate bg */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* set bg for different DJs */
+.diamond-tiesto:before {
+        background: url(images/barn.jpg) 0 0 repeat;
+}
+/* -----------------/diamonds  ------------------ */
+/* -----------------  hexagon  ------------------ */
+.hexagon {
+  position: relative;
+  width: 300px; 
+  height: 173.21px;
+  margin: 86.60px 0;
+  background-image: url(old-farmer.jpg);
+  background-size: auto 346.4102px;
+  background-position: center;
+}
+
+.hexTop,
+.hexBottom {
+  position: absolute;
+  z-index: 1;
+  width: 212.13px;
+  height: 212.13px;
+  overflow: hidden;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background: inherit;
+  left: 43.93px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+  content: "";
+  position: absolute;
+  width: 300.0000px;
+  height: 173.20508075688775px;
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-86.6025px);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background: inherit;
+}
+
+.hexTop {
+  top: -106.0660px;
+}
+
+.hexTop:after {
+  background-position: center top;
+}
+
+.hexBottom {
+  bottom: -106.0660px;
+}
+
+.hexBottom:after {
+  background-position: center bottom;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  top: 0.0000px;
+  left: 0;
+  width: 300.0000px;
+  height: 173.2051px;
+  z-index: 2;
+  background: inherit;
+}
+
+/* -----------------/ hexagon  ------------------ */
+/* ----------------- circle  ------------------ */
+.block {
+    width: 400px;
+    height: auto;
+    margin-bottom: 60px;
+}
+
+#circle {
+   border-radius: 50%;
+                overflow: hidden;
+                width: 200px;
+                height: 200px;
+}
+/* ----------------- /circle  ------------------ */
+/* ----------------- triangle  ------------------ */
+.triangle img { display: block; }
+
+.triangle { 
+   position   : relative; 
+   overflow   : hidden; 
+   padding    : 0; margin: 0; 
+   display    : inline-block; 
+}
+
+.triangle:after,
+.triangle:before {
+   content    : "";
+   position   : absolute;
+   z-index    : 2;
+   left       : -50%;
+   width      : 200%;
+   height     : 40%;
+   display    : block;
+   background : #fff;   
+}
+
+.triangle:before {
+    top: -24%;  
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+}
+
+.triangle:after {
+    bottom: -24%;  
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+}
+/* ----------------- /triangle  ------------------ */
+/* ----------------- pageOption  ------------------ */
+.pageOption {
+  overflow: hidden;
+  position: relative;
+  width: 30em;
+ height: 20em;
+}
+.option, .option img { width: 100%; height: 100%; }
+.option {
+  overflow: hidden;
+  position: absolute;  
+  /* arctan(27 / 40) = 34.01935deg 
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg);
+}
+.option:first-child {
+  left: -.25em;
+  transform-origin: 100% 0;
+}
+.option:last-child {
+  right: -.25em;
+  transform-origin: 0 100%;
+}
+.option img {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+/* ----------------- /pageOption  ------------------ */
+/* ----------------- shapes  ------------------ */
+.test1 {
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    /* Rotate div */
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+.test2 {
+    width: 400px;
+    height: auto;
+background-color:lightblue;
+    transform:skew(170deg,170deg);
+}
+.test3 {
+    width: 400px;
+    height: auto;
+    background-color:lightblue;
+    transform:rotateZ(25deg);
+}
+
+.sample1 {
+  height: 150px;
+  width: 150px;
+}
+.container1 {
+  height: 150px;
+  width: 150px;
+perspective: 500px;
+  border: 1px solid black;
+    background-color:inherit;
+}
+.transformed-1 {
+  transform: rotateY(50deg);
+    background-color:lightblue;
+}
+
+/*#####################################################*/
+/*####################.triangles  row ########################*/
+.triangles {
+  margin: 1px auto 0;
+  font-size: 0;
+  max-width: 100%;
+
+}
+
+.wrap-tri {
+  -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
+  -moz-transform: rotate(45deg) translate3d(0, 0, 0);
+  -ms-transform: rotate(45deg) translate3d(0, 0, 0);
+  -o-transform: rotate(45deg) translate3d(0, 0, 0);
+  transform: rotate(45deg) translate3d(0, 0, 0);
+  display: inline-block;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  -moz-transition: -moz-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  width: 100px;
+}
+
+.wrap-tri:hover {
+  -webkit-transition: -webkit-transform 700ms ease-out;
+  -moz-transition: -moz-transform 700ms ease-out;
+  transition: transform 700ms ease-out;
+  -webkit-transform: rotate(45deg) translate3d(10px, 10px, 0);
+  -moz-transform: rotate(45deg) translate3d(10px, 10px, 0);
+  -ms-transform: rotate(45deg) translate3d(10px, 10px, 0);
+  -o-transform: rotate(45deg) translate3d(10px, 10px, 0);
+  transform: rotate(45deg) translate3d(10px, 10px, 0);
+}
+
+.wrap-tri:nth-child(even) {
+  width: 40px;
+  -webkit-transform: rotate(225deg) translate3d(30px, 120px, 0);
+  -moz-transform: rotate(225deg) translate3d(30px, 120px, 0);
+  -ms-transform: rotate(225deg) translate3d(30px, 120px, 0);
+  -o-transform: rotate(225deg) translate3d(30px, 120px, 0);
+  transform: rotate(225deg) translate3d(30px, 120px, 0);
+}
+
+.wrap-tri:nth-child(even) .crop img { 
+ -webkit-transform: skew(-20deg, -20deg) rotate(-225deg);
+  -moz-transform: skew(-20deg, -20deg) rotate(-225deg);
+  -ms-transform: skew(-20deg, -20deg) rotate(-225deg);
+  -o-transform: skew(-20deg, -20deg) rotate(-225deg);
+  transform: skew(-20deg, -20deg) rotate(-225deg);
+}
+
+.wrap-tri:nth-child(even):hover {
+  -webkit-transform: rotate(225deg) translate3d(40px, 130px, 0); 
+ -moz-transform: rotate(225deg) translate3d(40px, 130px, 0);
+  -ms-transform: rotate(225deg) translate3d(40px, 130px, 0);
+  -o-transform: rotate(225deg) translate3d(40px, 130px, 0);
+  transform: rotate(225deg) translate3d(40px, 130px, 0);
+}
+
+.crop {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0;
+  display: block;
+  overflow: hidden;
+  -webkit-transform: skew(20deg, 20deg) translate3d(0, 0, 0);
+  -moz-transform: skew(20deg, 20deg) translate3d(0, 0, 0);
+  -ms-transform: skew(20deg, 20deg) translate3d(0, 0, 0);
+  -o-transform: skew(20deg, 20deg) translate3d(0, 0, 0);
+  transform: skew(20deg, 20deg) translate3d(0, 0, 0);
+}
+
+.crop img {
+  width: 160px;
+  height: 160px; 
+ position: absolute;
+  left: -50%;
+  margin-top: 36px;
+  margin-left: 36px;
+  top: -50%;
+  -webkit-transform: skew(-20deg, -20deg) rotate(-45deg);
+  -moz-transform: skew(-20deg, -20deg) rotate(-45deg);
+  -ms-transform: skew(-20deg, -20deg) rotate(-45deg);
+  -o-transform: skew(-20deg, -20deg) rotate(-45deg);
+  transform: skew(-20deg, -20deg) rotate(-45deg);
+  opacity: 0.7;
+  -webkit-transition: opacity 300ms ease-in-out;
+  -moz-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+.crop img:hover {
+  opacity: 1;
+}
+/*#################### .triangles  row########################*/
+/*####################  .hills  row########################*/
+.wrap-hills {
+    transform-origin:0 100%;
+    transform:rotate(-3deg);
+    overflow:hidden;
+    width:100%;
+    padding-right:5%;
+}
+.images-hills {
+    transform-origin:inherit;
+    transform:rotate(3deg);
+    overflow:hidden;
+    -webkit-backface-visibility:hidden; /** <-- to prevent diagonal line aliasing in chrome **/
+}
+img.hills {
+    float:left;
+    width:24%;
+    margin:0 .5%;
+}
+/*#################### .hills  row########################*/
+.sample2 {
+  height: 150px;
+  width: 150px;
+}
+
+.transformed-2 {
+height: 150px;
+  width: 150px;
+  background: lime;
+  border: 1px solid blue;
+ transform: skew(10deg, 20deg) translateX(20px);
+
+}
+
+.cube {
+  height: 100%;
+}
+.side {
+  height: 95px;
+  position: absolute;
+  width: 95px;
+}
+.top {
+  background: #9acc53;
+  transform: rotate(-45deg) skew(15deg, 15deg);
+}
+.left {
+  background: #8ec63f;
+  transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+}
+.right {
+  background: #80b239;
+  transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+}
+
+.sample3 {
+  height: 150px;
+  width: 150px;
+}
+
+.transformed-3 {
+  background: lime;
+transform: rotate(45deg);
+  transform: rotate3d(1, 2, 3, -45deg);
+}
+
+.sample4 {
+  height: 150px;
+  width: 150px;
+}
+
+.transformed-4 {
+  background: pink;
+height: 50px; width: 50px;
+    transform-origin: 50px 50px;
+    transform: rotate(45deg);
+}
+
+img.skewed {
+  width: 300px;
+  height: 200px;
+ /*General*/
+ transform: skewX(30deg); /*Firefox*/
+ -moz-transform: skewX(30deg); /*Microsoft Internet Explorer*/
+ -ms-transform: skewX(30deg); /*Chrome, Safari*/
+ -webkit-transform: skewX(30deg); /*Opera*/
+ -o-transform: skewX(30deg); }
+  /*2 triangle img */
+.pageOption {
+  overflow: hidden;
+  position: relative;
+  width: 30em;
+ height: 20em;
+}
+.option, .option img { width: 100%; height: 100%; }
+.option {
+  overflow: hidden;
+  position: absolute;  
+  /* arctan(27 / 40) = 34.01935deg 
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg);
+}
+.option:first-child {
+  left: -.25em;
+  transform-origin: 100% 0;
+}
+.option:last-child {
+  right: -.25em;
+  transform-origin: 0 100%;
+}
+.option img {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+  /*-- single triangle --*/
+
+.pageOption2 {
+  overflow: hidden;
+  position: relative;
+  width: 100%; height: 500px;
+}
+.option2, .option2 img { width: 100%; height: 100%; }
+.option2 {
+  overflow: hidden;
+  position: absolute;  
+  /* arctan(27 / 40) = 34.01935deg 
+   * need to skew by 90deg - 34.01935deg = 55.98065deg
+  */
+  transform: skewX(-55.98deg);
+}
+.option2:first-child {
+  left: -.25em;
+  transform-origin: 100% 0;
+}
+.option2:last-child {
+  right: -.25em;
+  transform-origin: 0 100%;
+}
+.option2 img {
+  transform: skewX(55.98deg);
+  transform-origin: inherit;
+}
+
+.skewer
+  width: 300px;
+  height: 200px;
+ /*General*/
+ transform: skewX(-30deg); /*Firefox*/
+ -moz-transform: skewX(-30deg); /*Microsoft Internet Explorer*/
+ -ms-transform: skewX(-30deg); /*Chrome, Safari*/
+ -webkit-transform: skewX(-30deg); /*Opera*/
+ -o-transform: skewX(-30deg); }
+
+.Example_D img {
+ height: 300px;
+ width: 300px;
+ -moz-border-radius: 1em 4em 1em 4em;
+ border-radius: 1em 4em 1em 4em; }
+
+.oval-image img {
+width: 300px;
+height: 200px;
+-webkit-border-radius: 50%;
+ -moz-border-radius: 50%;
+ -ms-border-radius: 50%;
+ -o-border-radius: 50%;
+ border-radius: 50%;
+ }
+
+.circular-image img {
+width: 300px;
+height: 300px;
+-webkit-border-radius: 150px;
+-moz-border-radius: 150px;
+-ms-border-radius: 150px;
+-o-border-radius: 150px;
+ border-radius: 150px;
+}
+
+.hexagon2 {
+  position: relative;
+  margin: 100px auto;
+  width: 190px;
+  height: 110px;
+  background-image: url('old-farmer.jpg');
+  background-position: center center;
+  z-index: 1;
+  
+/* Text styling */
+
+  line-height: 110px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 6px;
+  color: #fff;
+  color: rgba(255,255,255,.5);
+  cursor: pointer;
+  transition: color 500ms ease, text-shadow 500ms ease;
+}
+.hexagon2:hover {
+  color: #fff;
+  text-shadow: 0 0 10px white;
+}
+
+.hexagon2 .face1,
+.hexagon2 .face2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: inherit;
+  z-index: -1;
+  
+/* Keeps borders smooth in webkit */
+
+  backface-visibility: hidden;
+}
+.hexagon2 .face1:before,
+.hexagon2 .face2:before {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  background: inherit;
+}
+
+.hexagon2 .face1 { transform: rotate(60deg); }
+.hexagon2 .face1:before {
+  left: 0;
+  transform-origin: left top;
+  transform: rotate(-60deg) translate(-110px, 0);
+}
+
+.hexagon2 .face2 { transform: rotate(-60deg); }
+.hexagon2 .face2:before {
+  right: 0;
+  transform-origin: right top;
+  transform: rotate(60deg) translate(110px, 0);
+}
+
+.hex-template {
+background:url("old-farmer.jpg") no-repeat;
+width: 491px;
+height: 385px;
+float:left;
+}
+.hex-cover  {
+background:url("old-farmer.jpg") no-repeat;
+width: 491px;
+height: 385px;
+float:left;
+}
+
+
+/*#####################################################*/
+/*################# 7.  Helper classes #####################*/
+.circle{border-radius:50% !important}
+
+.round-small{border-radius:2px !important}
+.round,.round-medium{border-radius:4px !important}
+.round-large{border-radius:8px !important}
+.round-xlarge{border-radius:16px !important}
+.round-xxlarge{border-radius:32px !important}
+.round-jumbo{border-radius:64px !important}
+
+.image{position:relative}
+.image img{max-width:100%;height:auto}
+.image .title{position:absolute;bottom:8px;left:16px;color:#fff;font-size:20px}
+
+/*#####################################################*/
+/*------------------cuadro -------------------------*/	
+.cuadro_intro_hover{
+ background-color:#935347;
+        padding: 0px;
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+	}
+	.cuadro_intro_hover:hover .caption{
+		opacity: 1;
+		transform: translateY(-150px);
+		-webkit-transform:translateY(-150px);
+		-moz-transform:translateY(-150px);
+		-ms-transform:translateY(-150px);
+		-o-transform:translateY(-150px);
+	}
+	.cuadro_intro_hover img{
+		z-index: 4;
+	}
+	.cuadro_intro_hover .caption{
+		position: absolute;
+		top:150px;
+		-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+		-o-transition:all 0.3s ease-in-out;
+		-ms-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+		width: 100%;
+	}
+	.cuadro_intro_hover .blur{
+		background-color: rgba(0,0,0,0.7);
+		height: 300px;
+		z-index: 5;
+		position: absolute;
+		width: 100%;
+	}
+	.cuadro_intro_hover .caption-text{
+		z-index: 10;
+		color: #fff;
+		position: absolute;
+		height: 300px;
+		text-align: center;
+		top:-20px;
+		width: 100%;
+	}
+
+/*------------------/cuadro -------------------------*/	
+/*#####################################################*/
+/*------------------extra -------------------------*/	
+.extra {display:inline-block; text-decoration:none; margin:5px;}
+.extra {*display:inline;}
+
+.extra em {font-style:normal;}
+.extra em.txt, .extra b {display:none;}
+
+.extra .head {
+display:block;
+
+width: 100%;
+ height:55px;
+}
+.extra .color1 {background:#9f7520;}
+.extra .color2 {background:#877660;}
+.extra .color3 {background:#8aaa7f;}
+.extra .color4 {background:#935347;}
+
+.extra img {border:0; display:block;}
+.extra em.mh2 {
+padding-left:5px;
+ margin:0; color:#000;
+ font-weight:normal;
+ font-family: verdana, arial, sans-serif; font-size:24px;
+}
+.extra em.mh3 {
+padding-left:5px;
+ margin:0;
+ color:#fff;
+ font-weight:normal;
+ font-family: verdana, arial, sans-serif; font-size:16px;
+}
+
+.extra:hover {
+background:#fff;
+ position:relative;
+cursor:pointer;
+ text-decoration:none;
+}
+.extra:hover b {
+display:block;
+ position:absolute;
+ top:55px;
+ left:0;
+ 
+width: 100%;
+ background:#ccc;
+ height:60px;
+ opacity:0.7;
+}
+.extra:hover .color1 b {background:#9f7520;}
+.extra:hover .color2 b {background:#877660;}
+.extra:hover .color3 b {background:#8aaa7f;}
+.extra:hover .color4 b {background:#935347;}
+
+.extra:hover em.txt {
+display:block; 
+position:absolute; 
+top:60px; 
+
+width:90%; 
+left:5px; 
+height:50px; 
+color:#000; 
+margin:0; 
+line-height:1.5em;
+}
+
+.clear {clear:both;}
+
+/*------------------/extra -------------------------*/
+/* styles -----------------------------------*/
+
+/* styles -----------------------------------*/
+.jumbotron {
+  color: inherit;
+  width: 95%;
+  margin: auto;
+  border-radius: 12px;
+  background-color: rgba(0,0,0,.08);
+}
+
+.jumbotron > hr {
+  border-top-color: #d49055;
+}
+.jumbotron a {
+  color: #58593a;
+  text-decoration: none;
+}
+.jumbotron a:hover,
+.jumbotron a:focus {
+  color: #573f3a;
+  text-decoration: underline;
+}
+
+/* styles -----------------------------------*/
+
+/* Grid */
+.bx-1{background: #b03532; }
+.bx-2{background: #33a8a5; }
+.bx-3{background: #30997a; }
+.bx-4{background: #6a478f; }
+.bx-5{background: #da6f2b; }
+.bx-6{background: #3d8bb1; }
+.bx-7{background: #e03f3f; }
+.bx-8{background: #59a627; }
+.bx-9{background: #4464a1; }
+.bx-10{background: #dbbc8f; }
+.bx-11{background: #bbd78e;  }
+.bx-12{background: rgba(76, 175, 80, 0.1); }
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: rgb(255,255,255);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image--circle {
+  border-radius: 50%;
+}
+
+/* styles -----------------------------------*/
+        .box {
+            background: #FCD920;
+            font-family: "Futura", sans-serif;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px 0;
+border: 1px solid rgb(238, 130, 238);
+        }
+
+        .box-new {
+            background: #87D37C;
+	    font-family: "Futura", sans-serif;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px 0;
+border: 1px solid rgb(238, 130, 238);
+        }
+
+
+/* styles -----------------------------------*/

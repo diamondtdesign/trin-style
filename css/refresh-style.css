@@ -1,0 +1,64 @@
+
+#todays_palette div {
+	margin: 0px; height: 30px; text-indent: -9999px; overflow: hidden;
+}
+
+ h7 {
+	margin-top: 0px;
+}
+ h2 {
+	margin-top: 0px;
+}
+ h7 {
+	font-size: 1.5em; font-weight: 700;
+}
+ h7::before {
+	font-weight: 500; content: "{ \0020";
+}
+ h7::after {
+	font-weight: 500; content: "\0020 }";
+}
+ h2 {
+	font-size: 1.5em; font-weight: 700;
+}
+
+ hr {
+	background: inherit; border: currentColor; border-image: none; height: 1px;
+}
+
+ img {
+	border: currentColor; border-image: none;
+}
+
+
+.palette {
+	margin: 40px 0px 40px 115px; width: 620px; overflow: auto; clear: both; display: table; position: relative; box-sizing: border-box; box-shadow: 2px 2px 5px rgba(0,0,0,0.3); -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+.palette a {
+	color: rgb(102, 102, 102); font-weight: 400;
+}
+.palette a:hover {
+	color: rgb(167, 167, 167);
+}
+.palette_date {
+	left: -115px; top: 0px; width: 95px; text-align: right; position: absolute;
+}
+.palette_date span {
+	font-size: 1.5em; font-weight: 700; display: block;
+}
+.palette_colors {
+	padding: 5px; width: 437px; height: auto; text-align: center; vertical-align: top; display: table-cell; min-width: 437px;
+}
+.palette_colors img {
+	margin: 0px auto 5px; display: block; max-width: 437px;
+}
+.palette_colors h2 {
+	margin: 0px; text-transform: lowercase; font-size: 1.25em; display: inline;
+}
+.palette_colors h2::before {
+	font-weight: 400; content: "{ \0020";
+}
+.palette_colors h2::after {
+	font-weight: 400; content: "\0020 }";
+}
+

@@ -1,0 +1,154 @@
+﻿/*  Grid color styles --- http://www.color-hex.com/color-palette/61889 ---*/
+/* Grid */
+.bx1 {background: #00cccc; }
+.bx2 {background: #fff68f; }
+.bx3 {background: #f08080; }
+.bx4 {background: #00e595; }
+.bx5 {background: #da6f2b; }
+.bx6 {background: #d7b8ff; }
+.bx7 {background: #e03f3f; }
+.bx8 {background: #59a627; }
+.bx9 {background: #4464a1; }
+.bx10 {background: #dbbc8f; }
+.bx11 {background: #bbd78e;  }
+.bx12 {background: rgba(0,204,204, 0.9); }
+/*################# Header #####################*/
+#header1 { background: url(images/8th-day.jpg) no-repeat ;
+height: 250px; 
+border-bottom: 1px solid #62fb17; 
+background-position: center center;
+background-size: cover;
+ } 
+
+#navlist a:link    {color:rgba(178, 203, 229,.9); background-color:transparent; text-decoration:none}
+#navlist a:visited {color:rgba(178, 203, 229,.5); background-color:transparent; text-decoration:none}
+#navlist a:hover   {color:rgba(255, 255, 255,.7); background-color:transparent; text-decoration:underline}
+#navlist a:active  {color:rgba(0,0,0,.5); background-color:transparent; text-decoration:underline}
+/*#####################################################*/
+/*------------------/socials -------------------------*/	
+.socials a { color: rgba(0,0,0,.1); }
+.socials a:hover { font-size: 24px; rgba(0,0,0,.5);}
+
+/*#####################################################*/
+/*--------- Navigation ---------------------------*/
+.navbar { background-color: #608FBF;}
+.navbar a { color: #fff;}
+.navbar .active  {background-color:rgba(53, 92, 132,.5)}
+.ndropdown .ndropbtn {
+    color: white;
+    background-color: inherit;
+}
+.navbar a:hover, .ndropdown:hover .ndropbtn { color: #fff; background-color: rgba(0,0,0,.5);}
+.ndropdown-content { background-color: #f9f9f9;}
+.ndropdown-content a { color: #000;}
+.ndropdown-content a:hover { background-color: #ddd;}
+/*------------------ Navigation  -------------------------*/
+/*-----------------  Buttons   ----------------------------------*/
+.btn.purple-gradient{
+-webkit-transition:.5s ease;
+-o-transition:.5s ease;
+transition:.5s ease;
+color:#fff
+}
+.btn.purple-gradient:active,.btn.purple-gradient:active:focus .btn.purple-gradient.active,.btn.purple-gradient:focus,.btn.purple-gradient:hover{
+background:-webkit-linear-gradient(50deg,#ff88ce,#8f8bf7);
+background:-o-linear-gradient(50deg,#ff88ce,#8f8bf7);
+background:linear-gradient(40deg,#ff88ce,#8f8bf7)
+}
+
+.btn.peach-gradient{
+-webkit-transition:.5s ease;
+-o-transition:.5s ease;
+transition:.5s ease;color:#fff
+}
+
+.btn.peach-gradient:active,.btn.peach-gradient:active:focus .btn.peach-gradient.active,.btn.peach-gradient:focus,.btn.peach-gradient:hover{background:-webkit-linear-gradient(50deg,#ffdf89,#fc7b7b);
+background:-o-linear-gradient(50deg,#ffdf89,#fc7b7b);
+background:linear-gradient(40deg,#ffdf89,#fc7b7b)
+}
+
+.btn.aqua-gradient{
+-webkit-transition:.5s ease;
+-o-transition:.5s ease;transition:.5s ease;
+color:#fff
+}
+.btn.aqua-gradient:active,.btn.aqua-gradient:active:focus .btn.aqua-gradient.active,.btn.aqua-gradient:focus,.btn.aqua-gradient:hover{
+background:-webkit-linear-gradient(50deg,#3aa2ff,#1fffac);
+background:-o-linear-gradient(50deg,#3aa2ff,#1fffac);
+background:linear-gradient(40deg,#3aa2ff,#1fffac)
+}
+.btn.blue-gradient{
+-webkit-transition:.5s ease;
+-o-transition:.5s ease;
+transition:.5s ease;
+color:#fff
+}
+.btn.blue-gradient:active,.btn.blue-gradient:active:focus .btn.blue-gradient.active,.btn.blue-gradient:focus,.btn.blue-gradient:hover{
+background:-webkit-linear-gradient(50deg,#5ed1fc,#3647b3);
+background:-o-linear-gradient(50deg,#5ed1fc,#3647b3);
+background:linear-gradient(40deg,#5ed1fc,#3647b3)
+}
+
+/*------ fade-button ------*/
+.fade-button {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fade-button:hover {opacity: 1}
+/*---------------------------- buttons -----------------------------*/
+/*---------------------------------------------------------*/
+/*-----------------  To Top   ----------------------------------*/
+#toTop {
+  background-color: rgba(245,0,87,0.3);
+  color: #f50057;}
+
+#toTop:hover {
+  background-color: rgba(245,0,87,0.4);
+border: 2px solid rgba(245,0,87,0.5);
+}
+/*---------------------------------------------------------*/
+/*------------------------- Footer Styles --------------------------------*/
+.footer1 {
+        background:#6698cb;
+	border:1px solid #000;
+	color: #fff;
+}
+
+/*------------------------- Footer Styles --------------------------------*/
+
+/*########################################*/
+  *.icon-white {color: #fff}
+    *.icon-silver {color: #C0C0C0}
+.icon {color:#555555 }
+
+/*----------------- footer social -------------------------*/
+.footer.social-icon a:link {color: #fff;}
+
+/*----------------- Links -------------------------*/
+
+a {
+  color:rgba(178, 203, 229,.9);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+ color:rgba(178, 203, 229,.7);
+  text-decoration: underline;
+}
+a:active  {
+ color:rgba(0,0,0,.5);
+ background-color:transparent;
+ text-decoration: none;
+}
+/*----------------- footer social -------------------------*/

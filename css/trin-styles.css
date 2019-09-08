@@ -1,0 +1,80 @@
+﻿/* styles -----------------------------------*/
+.jumbotron {
+  color: inherit;
+  width: 95%;
+  margin: auto;
+  border-radius: 12px;
+  background-color: rgba(0,0,0,.08);
+}
+
+.jumbotron > hr {
+  border-top-color: #d49055;
+}
+.jumbotron a {
+  color: #58593a;
+  text-decoration: none;
+}
+.jumbotron a:hover,
+.jumbotron a:focus {
+  color: #573f3a;
+  text-decoration: underline;
+}
+/*  Grid color styles -----------------------------------*/
+
+/* Grid */
+.bx-1{background: #b03532; }
+.bx-2{background: #33a8a5; }
+.bx-3{background: #30997a; }
+.bx-4{background: #6a478f; }
+.bx-5{background: #da6f2b; }
+.bx-6{background: #3d8bb1; }
+.bx-7{background: #e03f3f; }
+.bx-8{background: #59a627; }
+.bx-9{background: #4464a1; }
+.bx-10{background: #dbbc8f; }
+.bx-11{background: #bbd78e;  }
+.bx-12{background: rgba(76, 175, 80, 0.1); }
+
+/* Image styles -----------------------------------*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: rgb(255,255,255);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image--center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image--circle {
+  border-radius: 50%;
+}
+
+/* Grid styles -----------------------------------*/
+        .box {
+            background: #FCD920;
+            font-family: "Futura", sans-serif;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px 0;
+border: 1px solid rgb(238, 130, 238);
+        }
+
+        .box-new {
+            background: #87D37C;
+	    font-family: "Futura", sans-serif;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px 0;
+border: 1px solid rgb(238, 130, 238);
+        }
+
+
+/* styles -----------------------------------*/

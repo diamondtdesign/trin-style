@@ -1,0 +1,424 @@
+﻿
+/*#####################################################*/
+/*------------------slider 1 -------------------------*/
+/* setup the responsive size of the container */
+/* set the max-width to the actual width of the images and the width to the size when the browser width is less than the max-width */
+/* margin:0 auto; centers the slideshow */
+.slideshow {width:95%; max-width:640px; margin:0 auto; position:relative; overflow:hidden; border:1px solid #000;}
+
+/* position the images and make them 100% width, display:block is used to remove the bottom padding that some browsers add to the images */
+.slideshow img {position:absolute; top:0; left:-100%; width:100%; display:block;}
+
+/* make the first image position:relative; to set the responsive height of the slideshow */
+.slideshow img:first-child {position:relative;} 
+
+/* the animation for each slide */
+/* each slide is shown for 6 seconds and the total time for the 8 slides is 48 seconds with each slide delayed 6 seconds after the previous slide */
+/* we need two animations for each image, one for Chrome, Safari and Opera, and the other for Firefox and Internet Explorer */
+.slideshow img:nth-of-type(1) {-webkit-animation:autoplay 48s linear infinite 0s; animation:autoplay 48s linear infinite 0s;} 
+.slideshow img:nth-of-type(2) {-webkit-animation:autoplay 48s linear infinite 6s; animation:autoplay 48s linear infinite 6s;}
+.slideshow img:nth-of-type(3) {-webkit-animation:autoplay 48s linear infinite 12s; animation:autoplay 48s linear infinite 12s;}
+.slideshow img:nth-of-type(4) {-webkit-animation:autoplay 48s linear infinite 18s; animation:autoplay 48s linear infinite 18s;}
+.slideshow img:nth-of-type(5) {-webkit-animation:autoplay 48s linear infinite 24s; animation:autoplay 48s linear infinite 24s;}
+.slideshow img:nth-of-type(6) {-webkit-animation:autoplay 48s linear infinite 30s; animation:autoplay 48s linear infinite 30s;}
+.slideshow img:nth-of-type(7) {-webkit-animation:autoplay 48s linear infinite 36s; animation:autoplay 48s linear infinite 36s;}
+.slideshow img:nth-of-type(8) {-webkit-animation:autoplay 48s linear infinite 42s; animation:autoplay 48s linear infinite 42s;}
+
+/* animation keyframes one for Firefox and Internet Explorer, the other for Chrome, Safari and Opera */
+/* the show time for each slide is 100/8 = 12.5% of the total time */
+/* the slide in time is 1% and the slide out time is 12.5% + 1% = 13.5% */
+/* you can adjust the slide in and out time to make it faster or slower */
+
+@keyframes autoplay {
+0% {left:-100%;}
+1%, 12.5% {left:0;}
+13.5%, 100% {left:100%;}
+}
+@-webkit-keyframes autoplay {
+0% {left:-100%;}
+.1%, 12.5% {left:0;}
+13.5%, 100% {left:100%;}
+}
+/*------------------/slider 1 -------------------------*/
+/*#####################################################*/
+/*------------------slider 2 -------------------------*/
+	/* Common */
+
+.slide-container{
+  width: 100%;
+
+  height: 300px;
+}
+
+
+/* Slider */
+
+
+.slider {
+
+  margin: 50px auto;
+
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border: 10px solid;
+
+  border-top-color: #856036;
+
+  border-left-color: #5d4426;
+
+  border-bottom-color: #856036;
+
+  border-right-color: #5d4426;
+
+  position: relative;
+
+}
+
+
+
+.photo {
+
+width: 100%;
+  position: absolute;
+
+  animation: round 16s infinite;
+
+  opacity: 0;
+
+}
+
+@keyframes round {
+
+  25% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+}
+
+img:nth-child(1) {
+  animation-delay: 12s;
+}
+
+
+img:nth-child(2) {
+  animation-delay: 8s;
+}
+
+
+img:nth-child(3) {
+  animation-delay: 4s;
+}
+
+
+img:nth-child(4) {
+  animation-delay: 0s;
+}
+
+
+/*------------------/slider 2 -------------------------*/	
+/*#####################################################*/
+/*------------------slider 3 -------------------------*/
+
+.cssplay_auto {
+width:90%;
+ max-width:640px;
+ position:relative;
+ margin:20px auto;
+ overflow:hidden;
+}
+.cssplay_auto img[id*="img"] {
+width:100%;
+ position:absolute;
+ left:0;
+ top:0;
+ opacity:0;
+}
+
+/* set the width/height of the slideshow */
+.cssplay_auto img#blank {
+display:block;
+ width:100%;
+ visibility:hidden;
+}
+
+/* the slideshow */
+.cssplay_auto #img_01 {-webkit-animation:autoplay 21s linear infinite 0s; animation:autoplay 21s linear infinite 0s;}
+.cssplay_auto #img_02 {-webkit-animation:autoplay 21s linear infinite 3s; animation:autoplay 21s linear infinite 3s;}
+.cssplay_auto #img_03 {-webkit-animation:autoplay 21s linear infinite 6s; animation:autoplay 21s linear infinite 6s;}
+.cssplay_auto #img_04 {-webkit-animation:autoplay 21s linear infinite 9s; animation:autoplay 21s linear infinite 9s;}
+.cssplay_auto #img_05 {-webkit-animation:autoplay 21s linear infinite 12s; animation:autoplay 21s linear infinite 12s;}
+.cssplay_auto #img_06 {-webkit-animation:autoplay 21s linear infinite 15s; animation:autoplay 21s linear infinite 15s;}
+.cssplay_auto #img_07 {-webkit-animation:autoplay 21s linear infinite 18s; animation:autoplay 21s linear infinite 18s;}
+
+@keyframes autoplay {
+	4%,14% {opacity:1;}
+	0%,18%,100% {opacity:0;}
+}
+@-webkit-keyframes autoplay {
+	4%,14% {opacity:1;}
+	0%,18%,100% {opacity:0;}
+}
+
+/* the slide timing indicator */
+.cssplay_auto #slide {
+width:98px;
+ height:5px;
+ position:absolute;
+ left:0;
+ bottom:0;
+ background:rgba(255,255,255,0.5); 
+-webkit-animation:slide 3s linear infinite;
+ animation:slide linear 3s infinite;
+}
+
+@keyframes slide {
+	0% {left:-100px;}
+	100% {left:100%;}
+}
+@-webkit-keyframes slide {
+	0% {left:-100px;}
+	100% {left:100%;}
+}
+
+/*------------------/slider 3 -------------------------*/	
+/*#####################################################*/
+/*------------------slider 4 -------------------------*/
+/*------------------ carousel -------------------------*/
+
+.carousel{
+
+    margin-bottom:24px;
+
+    margin-bottom:2rem;
+
+}
+
+
+
+
+
+
+/*------------------------------------*\
+
+    $MAIN
+
+\*------------------------------------*/
+
+small{
+    color:#999;
+}
+
+a{
+    color:#09f;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+
+    $CAROUSEL
+
+\*------------------------------------*/
+
+.carousel{
+
+    overflow:hidden;
+
+    width:100%;
+
+    position:relative;
+}
+
+.panes{
+
+    list-style:none;
+
+    position:relative;
+
+    width:500%; /* Number of panes * 100% */
+
+    overflow:hidden; /* This is used solely to clear floats, it does not add functionality. */
+ 
+-webkit-animation:carousel 30s infinite;
+
+-moz-animation:carousel 30s infinite;
+
+animation:carousel 30s infinite;
+
+}
+
+
+.panes > li{
+
+    position:relative;
+
+    float:left;
+
+    width:20%; /* 100 / number of panes */
+
+}
+
+.panes > li > a{
+
+    display:block;
+
+}
+
+.carousel img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:100%;
+
+}
+
+.carousel h2{
+ 
+   font-size:1em;
+
+    padding:0.5em;
+
+    position:absolute;
+ 
+   right:10px;
+
+    bottom:10px;
+
+    left:10px;
+
+    text-align:right;
+
+    color:#fff;
+
+    background-color:rgba (0,0,0,0.75);
+
+}
+
+
+@-moz-keyframes carousel{
+    0%    { left:0; }
+
+    11%   { left:0; }
+
+    12.5% { left:-100%; }
+
+    23.5% { left:-100%; }
+
+    25%   { left:-200%; }
+
+    36%   { left:-200%; }
+
+    37.5% { left:-300%; }
+
+    48.5% { left:-300%; }
+
+    50%   { left:-400%; }
+
+    61%   { left:-400%; }
+
+    62.5% { left:-300%; }
+
+    73.5% { left:-300%; }
+
+    75%   { left:-200%; }
+
+    86%   { left:-200%; }
+
+    87.5% { left:-100%; }
+
+    98.5% { left:-100%; }
+
+    100%  { left:0; }
+}
+
+
+@-webkit-keyframes carousel{
+ 
+    0%    { left:0; }
+
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+
+    25%   { left:-200%; }
+
+    36%   { left:-200%; }
+
+    37.5% { left:-300%; }
+
+    48.5% { left:-300%; }
+
+    50%   { left:-400%; }
+
+    61%   { left:-400%; }
+
+    62.5% { left:-300%; }
+
+    73.5% { left:-300%; }
+
+    75%   { left:-200%; }
+
+    86%   { left:-200%; }
+
+    87.5% { left:-100%; }
+
+    98.5% { left:-100%; }
+
+    100%  { left:0; }
+}
+
+
+@keyframes carousel{
+
+    0%    { left:0; }
+
+    11%   { left:0; }
+
+    12.5% { left:-100%; }
+
+    23.5% { left:-100%; }
+
+    25%   { left:-200%; }
+
+    36%   { left:-200%; }
+
+    37.5% { left:-300%; }
+
+    48.5% { left:-300%; }
+
+    50%   { left:-400%; }
+
+    61%   { left:-400%; }
+
+    62.5% { left:-300%; }
+
+    73.5% { left:-300%; }
+
+    75%   { left:-200%; }
+
+    86%   { left:-200%; }
+
+    87.5% { left:-100%; }
+
+    98.5% { left:-100%; }
+
+    100%  { left:0; }
+}
+
+/*------------------ /carousel -------------------------*/
+/*------------------/slider 4 -------------------------*/	
+/*#####################################################*/
+	

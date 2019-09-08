@@ -1,0 +1,633 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Trin All In</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!========================================>
+<!-- CSS -->
+<link href="main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+<style>
+.new {
+  font-family: "Tangerine", serif;
+}
+</style>
+
+
+<style>
+/*############### https://fonts.google.com/ ####################*/
+@import url('http://fonts.googleapis.com/css?family=Kavoon');
+@import url(https://fonts.googleapis.com/css?family=Courgette);
+@import url(https://fonts.googleapis.com/css?family=Caveat:400,700);
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+/*####################### Colors #################*/
+.default {color: #ebe3bc;
+  background-color: #c9a263;
+border: 1px solid rgba(130,130,102, 0.6);
+}
+.primary {color: #ebe3bc;
+  background-color: #788c7a;
+border: 1px solid rgba(145,161,134, 0.6);
+}
+.success {color: #ebe3bc;
+  background-color: #476353;
+border: 1px solid rgba(71,99,83, 0.6);
+}
+.info {color: #ebe3bc;
+  background-color: #2e3754;
+border: 1px solid rgba(46,55,84, 0.6);
+}
+.warning {color: #ebe3bc;
+  background-color: #d49055;
+border: 1px solid rgba(212,144,85, 0.6);
+}
+.danger {color: #ebe3bc;
+  background-color: #D9534F;
+border: 1px solid rgba(217,83,79, 0.6);
+}
+
+/*####################### Font Size #################*/
+p {color: #000;}
+
+h1{
+font-family: 'Kavoon', cursive;
+color: inherit;
+font-weight: 400;
+font-size:36px
+}
+h2{
+font-family: 'Courgette', cursive;
+color: inherit;
+font-weight: 400;
+font-size:30px
+}
+h3{
+font-family: 'Caveat', cursive;
+color: inherit;
+font-weight: 400;
+font-size:24px
+}
+h4{
+font-family: 'Caveat', cursive;
+color: inherit;
+font-weight: 400;
+font-size:20px
+}
+h5{
+font-family: 'Caveat', cursive;
+color: inherit;
+font-weight: 400;
+font-size:18px
+}
+h6{
+font-family: 'Caveat', cursive;
+color: inherit;
+font-weight: 400;
+font-size:16px
+}
+ .google {
+font-family: 'Kaushan Script', cursive;
+font-weight: 400;
+font-size:36px;
+}
+ .google-2 {
+font-family: 'Kaushan Script', cursive;
+font-weight: 400;
+font-size:14px;
+color:rgba(199,173,136,.9);
+      }
+.google-3 {
+font-family: 'Kaushan Script', cursive;
+font-weight: 400;
+font-size:24px;
+}
+/*##############################################*/
+/*################# fonts sizes #####################*/
+@keyframes SmallerFont {
+    0% { font-size:24px; }
+    100% { font-size:12px; }
+}
+
+@-webkit-keyframes SmallerFont {
+    0% { font-size:24px; }
+    100% { font-size:12px; }
+}
+
+@keyframes LargerFont {
+    0% { font-size:12px; }
+    100% { font-size:24px; }
+}
+
+@-webkit-keyframes LargerFont {
+    0% { font-size:12px; }
+    100% { font-size:24px; }
+}
+
+/*##############################################*/
+/*################# 
+
+fonts
+
+ #####################*/
+
+.tiny-print{font-size:10px !important}
+
+.small-print{font-size:12px !important}
+
+.medium-print{font-size:15px !important}
+
+.large-print{font-size:18px !important}
+
+.xlarge-print{font-size:24px !important}
+
+.xxlarge-print{font-size:36px !important}
+
+.xxxlarge-print{font-size:48px !important}
+
+.slim-print{font-family:"Segoe UI",Arial,sans-serif !important}
+
+.wide-print{font-family:"Segoe UI",Arial,sans-serif !important;letter-spacing:4px}
+
+.jumbo{font-size:64px !important}
+
+
+/*##############################################*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #777777;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+h1 small,
+.h1 small,
+h2 small,
+.h2 small,
+h3 small,
+.h3 small,
+h1 .small,
+.h1 .small,
+h2 .small,
+.h2 .small,
+h3 .small,
+.h3 .small {
+  font-size: 65%;
+}
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h4 small,
+.h4 small,
+h5 small,
+.h5 small,
+h6 small,
+.h6 small,
+h4 .small,
+.h4 .small,
+h5 .small,
+.h5 .small,
+h6 .small,
+.h6 .small {
+  font-size: 75%;
+}
+h1,
+.h1 {
+  font-size: 36px;
+}
+h2,
+.h2 {
+  font-size: 30px;
+}
+h3,
+.h3 {
+  font-size: 24px;
+}
+h4,
+.h4 {
+  font-size: 18px;
+}
+h5,
+.h5 {
+  font-size: 14px;
+}
+h6,
+.h6 {
+  font-size: 12px;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+@media (min-width: 768px) {
+  .lead {
+    font-size: 21px;
+  }
+}
+small,
+.small {
+  font-size: 85%;
+}
+mark,
+.mark {
+  background-color: #fcf8e3;
+  padding: .2em;
+}
+
+/*##############################################*/
+.labels {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 100%;
+  font-weight: bold;
+  line-height: 1;
+  color: #ffffff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+ border: 1px solid #000;
+  border-radius: .25em;
+}
+a.labels:hover,
+a.labels:focus {
+  color: #ebe3bc;
+  text-decoration: none;
+  cursor: pointer;
+}
+.labels:empty {
+  display: none;
+}
+.btn .labels {
+  position: relative;
+  top: -1px;
+}
+
+/*#####################################################*/
+/*#################  Helper classes #####################*/
+
+.left-align{text-align:left !important}
+
+.right-align{text-align:right !important}
+
+.justify{text-align:justify !important}
+
+.center{text-align:center !important}
+
+/*#####################################################*/
+</style>
+</head>
+<body>
+ <div class="page">
+<!----------------------------------------------------------------->
+<!------------------Place your code here -------------------------->
+<!----------------------------------------------------------------->
+<div class="row">
+<div class="bx6">
+<p class="labels default">Donec ullamcorper nulla non metus auctor fringilla. <a class="labels default" href="#">Link 1</a></p>
+<p class="labels primary">Donec ullamcorper nulla non metus auctor fringilla. <a class="labels primary" href="#">Link 1</a></p>
+<p class="labels success">Donec ullamcorper nulla non metus auctor fringilla. <a class="labels success" href="#">Link 1</a></p>
+<p class="labels info">Donec ullamcorper nulla non metus auctor fringilla. <a class="labels info" href="#">Link 1</a></p>
+<p class="labels warning">Donec ullamcorper nulla non metus auctor fringilla. <a class="labels warning" href="#">Link 1</a></p>
+<p class="labels danger">Donec ullamcorper nulla non metus auctor fringilla. <a class="labels danger" href="#">Link 1</a></p>
+
+<h1>Sample h1</h1>
+<h2>Sample h2</h2>
+<h3>Sample h3</h3>
+<h4>Sample h4</h4>
+<h5>Sample h5</h5>
+<h6>Sample h6</h6>
+
+
+
+<h1 class="new">Sample h1 New</h1>
+<h2 class="new">Sample h2 New</h2>
+<h3 class="new">Sample h3 New</h3>
+<h4 class="new">Sample h4 New</h4>
+<h5 class="new">Sample h5 New</h5>
+<h6 class="new">Sample h6 New</h6>
+<p class="new">Making the Web Beautiful!</p>
+<!--=============================================-->
+</div>
+<div class="bx4">
+<style>
+
+</style>
+Script <span class="amp">&amp;</span> Style
+
+<p>This is some <span class="blink">blinking</span> text.</p>
+
+<span class="third-degree">Something&rsquo;s not quite level here.</span>
+
+</div><!-- bx -->
+<!--=============================================-->
+<!--=============================================-->
+<div class="bx4">
+<style>
+@import url('http://fonts.googleapis.com/css?family=bxter:400,700');
+p {
+  color: rgb(80,80,80);
+}
+p.blue::-moz-selection {
+  color: #000;
+  background: rgb(40,170,220);
+}
+p.blue::selection {
+  color: #000;
+  background: rgb(40,170,220);
+}
+p.pink::-moz-selection {
+  color: #000;
+  background: rgb(255,0,100);
+}
+p.pink::selection {
+  color: #fff;
+  background: rgb(255,0,100);
+}
+</style>
+<p class="blue">Highlight me, I'll have a blue background and white text.</p>
+<p class="pink">Highlight me, I'll have a pink background and white text.</p>
+<p>Highlight me, I just show default highlighted colours.</p>
+
+
+</div><!-- bx -->
+<!--=============================================-->
+<!--=============================================-->
+<div class="bx2">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+p.Dancing{font-size: 24px;
+font-family:'Dancing Script', cursive;
+}
+</style>
+<p class="Dancing">Dancing The sky was cloudless and of a deep dark blue.</p>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas');
+.Christmas{font-size: 100%;
+line-height: 1.6875;
+font-family: 'Mountains of Christmas', cursive;
+}
+</style>
+<p class="Christmas">Christmas The sky was cloudless and of a deep dark blue.</p>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+.Gloria{
+font-family: 'Gloria Hallelujah', cursive;
+}
+</style>
+<p class="Gloria">Gloria The sky was cloudless and of a deep dark blue.</p>
+<!========================================>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes');
+p.Vibes{
+font-family: 'Great Vibes', cursive;
+}
+</style>
+<p class="Vibes">Vibes The sky was cloudless and of a deep dark blue.</p>
+<!========================================>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+p.Indie{
+font-family: 'Indie Flower', cursive;
+}
+</style>
+<p class="Indie">Indie The sky was cloudless and of a deep dark blue.</p>
+
+</div><!-- bx -->
+<!--=============================================-->
+<!--=============================================-->
+<div class="bx2">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Aguafina+Script|Arima+Madurai|Bonbon|Clicker+Script|Dancing+Script|Great+Vibes|Indie+Flower|Satisfy');
+.Arima{font-family: 'Arima Madurai', cursive;}
+.Indie{font-family: 'Indie Flower', cursive;}
+.Satisfy{font-family: 'Satisfy', cursive;}
+.Dancing{font-family: 'Dancing Script', cursive;}
+.Vibes{font-family: 'Great Vibes', cursive;}
+.Clicker{font-family: 'Clicker Script', cursive;}
+.Aguafina{font-family: 'Aguafina Script', cursive;}
+.Bonbon{font-family: 'Bonbon', cursive;}
+</style>
+
+<p class="Arima">Arima, She stared through the window at the stars.</p>
+<p class="Indie">Indie, A shining crescent far beneath the flying vessel.</p>
+<p class="Satisfy">Satisfy, A red flair silhouetted the jagged edge of a wing.</p>
+<p class="Dancing">Dancing, Almost before we knew it, we had left the ground.</p>
+<p class="Vibes">Vibes, Then came the night of the first falling star.</p>
+<p class="Clicker">Clicker, Then came the night of the first falling star.</p>
+<p class="Aguafina">, Almost before we knew it, we had left the ground.</p>
+<p class="Bonbon">Bonbon, A red flair silhouetted the jagged edge of a wing.</p>
+<p class="blue">blue, A shining crescent far beneath the flying vessel.</p>
+<p class="blue">blue, She stared through the window at the stars.</p>
+</div><!-- bx -->
+<!--=============================================-->
+<!--=============================================-->
+<div class="bx4">
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas&effect=shadow-multiple');
+.ChristmasA{font-family: 'Mountains of Christmas', cursive;
+}
+</style>
+<div class="font-effect-shadow-multiple">
+<h1 class="ChristmasA">The spectacle before us was indeed sublime.</h1>
+</div>
+<!========================================>
+<!========================================>
+<style>
+.ChristmasB{
+@import url('https://fonts.googleapis.com/css?family=Mountains+of+Christmas:400,700&effect=vintage');
+font-family: 'Mountains of Christmas', cursive;
+}
+</style>
+<div class="font-effect-vintage">
+<h1 class="ChristmasB">VintageThe sky was cloudless and of a deep dark blue.</h1>
+</div>
+
+
+<style>
+.Retro{
+@import url('http://fonts.googleapis.com/css?family=Sansita+One');
+font-family: 'Mountains of Christmas', cursive;
+}
+</style>
+<h1 class="Retro">☺ Retro Style ☺</h1>
+<!========================================>
+</div><!-- bx -->
+<!--=============================================-->
+<!--=============================================-->
+<div class="bx12">
+<!========================================>
+<style>
+h1 {
+	margin:50px 0;
+	font-family: 'Montserrat Alternates', sans-serif;
+	color:pink;
+}
+header h1 {
+	font-size:50px;
+}
+.titlebg {
+	background:#444;
+	width:100%
+}
+/* Text Effect Styles */
+
+#effect5 {
+	background:#fff
+}
+#effect5 h1 {
+	color:#444
+}
+#effect5 h2 {
+	font-size:130px;
+	font-weight:bold;
+	font-family: 'Josefin Sans', sans-serif;
+	padding:40px 0 80px;
+	color: #353535;
+	letter-spacing:10px;
+	text-shadow: 
+ 4px 4px 0px #fff, 6px 6px 0px rgba(54, 54, 54, 0.5);
+}
+
+</style>
+
+<section id="effect5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+         <h1>5.A bx retro</h1>
+        <h2>I am a little retro</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- bx -->
+<!--=============================================-->
+<div class="bx12">
+<style>
+@import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700');
+
+
+p.first-line {
+  font-family: "Roboto Condensed";
+  font-size: 1.5em;
+  line-height: 1.5;
+  color: #000;
+}
+p.first-line::first-line {
+  color: rgb(255,50,100);
+}
+</style>
+
+  <p class="first-line">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit maiores cupiditate corrupti perspiciatis vel velit numquam? Eligendi animi placeat fugiat deserunt a omnis facere magni aut quod magnam quasi quo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam eligendi odit alias corporis autem natus mollitia sequi eaque nisi vero! Odio itaque unde tempore sint porro cupiditate cumque totam veniam.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id blanditiis cupiditate ipsam esse debxis nesciunt doloribus ratione itaque rem. Itaque assumenda alias ut provident animi porro nihil facilis sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio officia mollitia debxis nam corporis facere atque minima cumque amet sint commodi aspernatur fugiat quae dicta quidem sequi excepturi error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quisquam error recusandae modi nostrum adipisci numquam ullam architecto vitae odio incidunt voluptas dolore fugiat! Ipsum voluptatem ipsa molestiae quasi incidunt!</p>
+</div><!-- bx -->
+<!--=============================================-->
+<!--=============================================-->
+<div class="bx12">
+<style>
+
+.first :first-of-type {
+  color: rgb(40,170,220);
+}
+</style>
+
+  <div class="first">
+    <span>I am targeted</span> <span>but i am not.</span> turpis egestas. Vestibulum tortor quam, feugiat vitae, <strong>I'm also targeted cuz i'm in a different tag</strong> eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. 
+  </div>
+
+</div><!-- bx -->
+<!--=============================================--><!--=============================================-->
+<div class="bx12">
+<style>
+@import url('http://fonts.googleapis.com/css?family=Bevan');
+
+
+ p.first {
+  color: rgb(50,50,50);
+}
+
+ p.first::first-letter {
+  font-family: "Bevan";
+  float: left;
+  margin: 0 20px 0 0;
+  font-size: 72px;
+  line-height: 1;
+  color: rgb(40,170,220);
+  text-shadow: 4px 4px 0 rgb(200,200,200);
+}
+</style>
+<p class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque id blanditiis cupiditate ipsam esse debxis nesciunt doloribus ratione itaque rem. Itaque assumenda alias ut provident animi porro nihil facilis sint. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia distinctio officia mollitia debxis nam corporis facere atque minima cumque amet sint commodi aspernatur fugiat quae dicta quidem sequi excepturi error. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quisquam error recusandae modi nostrum adipisci numquam ullam architecto vitae odio incidunt voluptas dolore fugiat! Ipsum voluptatem ipsa molestiae quasi incidunt!</p>
+
+
+</div><!-- bx -->
+<!--=============================================-->
+
+</div><!-- page -->
